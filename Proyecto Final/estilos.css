@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 125px;
+    background: #8F3925;
+}
+
+.header img {
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.form-login {
+    width: 400px;
+    background: #F4F5F3;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: calibri;
+    color: black;
+}
+
+.form-login h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background:#F4F5F3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.form-login .textoAcuerdos {
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.form-login a {
+    text-decoration: none;
+}
+
+.form-login .boton {
+    width: 100%;
+    background-color: #8F3925;
+    border: none;
+    padding: 12px;
+    font-size: 17px;
+    color: white;
+}
+
+.navegador{
+    width: 300px;
+    height: 100%;
+    background: #8F3925;
+    position: fixed;
+    float: left;
+}
+
+.navegador .opciones {
+    display: grid;                  /* Alinea el contenedor al medio*/ 
+    place-items: center;
+    height: 50px;
+    width: 75%;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.navegador .opciones a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: black ;
+    padding: 7px 52px;
+    width: 90%;
+    height: 70%;
+    border: black solid 1px;
+}
+
+.navegador .opciones a:hover { 
+    display: grid;
+    place-items: center;
+    width: 90%;
+    height: 70%;
+    color: #72463C;
+    background-color: #BF9389;
+    background: #ccc;
+}
+
+.cuerpo {
+    float: left;
+}
