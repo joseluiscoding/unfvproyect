@@ -64,7 +64,7 @@
 }
 
 .navegador{
-    width: 300px;
+    width: 17%;
     height: 100%;
     background: #8F3925;
     position: fixed;
@@ -101,8 +101,27 @@
     background: #ccc;
 }
 
-.cuerpo {
-    float: left;
+main .cuerpo {
+    margin-left: 25%;
+    margin-top: 2%;
+    font-size: 35px;
+    background-image: url("imagenes/imgFondo.png");
+}
+
+.cuerpo .opcAdmin{
+    width: 40%;
+    margin-top: 2%;
+    
+}
+
+.cuerpo .opcAdmin .boton{
+    width: 100%;
+    margin-top: 12%;
+    padding: 20px ;
+    background-color: white;
+    font-size: 30px;
+    color: black;
+    
 }
 
 /*PAGINA DE DOCENTES*/
