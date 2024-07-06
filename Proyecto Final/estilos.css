@@ -65,9 +65,9 @@
 
 .navegador{
     width: 17%;
-    height: 100%;
+    height: 100vh;
     background: #8F3925;
-    position: fixed;
+    display: inline-block;
     float: left;
 }
 
@@ -101,17 +101,25 @@
     background: #ccc;
 }
 
-main .cuerpo {
-    margin-left: 25%;
-    margin-top: 2%;
-    font-size: 35px;
+body {
     background-image: url("imagenes/imgFondo.png");
+}
+
+.cuerpo {
+    margin-top: 2%;
+    width: 83%;
+    font-size: 35px;
+    display: inline-block;
+}
+
+.cuerpo h1{
+    text-align: center;
 }
 
 .cuerpo .opcAdmin{
     width: 40%;
     margin-top: 2%;
-    
+    margin-left: 20%;
 }
 
 .cuerpo .opcAdmin .boton{
