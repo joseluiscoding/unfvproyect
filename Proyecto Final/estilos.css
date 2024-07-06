@@ -65,7 +65,7 @@
 
 .navegador{
     width: 17%;
-    height: 100vh;
+    height: 86.4vh;
     background: #8F3925;
     float: left;
 }
@@ -99,8 +99,25 @@
     background-color: #BF9389;
     background: #ccc;
 }
+.navegador  {
+    position: relative;
+}
+.navegador .logout .button{
+    width: 150px;
+    background-color: #B07566;
+    border: white solid 1px;
+    padding: 12px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    margin: 0px 22%;
+    position: absolute;
+    bottom: 20px;
+    
+}
 
 body {
+    height: 600px;
     background-image: url("imagenes/imgFondo.png");
 }
 
