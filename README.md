@@ -1,3 +1,6 @@
 # Proyecto final UNFV
 
-## ------nombre del curso---------
+## ------Programación Aplicada III---------
+Integrantes:
+-José Luis
+-Sebastian
