@@ -1,7 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+
 }
 
 .header {
@@ -15,25 +20,36 @@
     margin-top: 10px;
 }
 
+.principal {
+    display: flex;
+    justify-content: space-between;
+}
+
 .section1 {
     float: left;
     width: 750px;
+    margin: 150px 0 0 300px;
+
 }
 
-.section1 h1{
-    font-size:70px;
+.section1 h1 {
+    font-size: 70px;
     margin-bottom: 30px;
 }
 
-.section1 p{
-    font-size:40px;
+.section1 p {
+    font-size: 35px;
+    width: 600px;
+    text-align: justify;
 }
 
 .section2 {
     float: left;
+    margin-right: 300px;
+    margin-top: 150px;
 }
 
-.navegador{
+.navegador {
     width: 17%;
     height: 86.4vh;
     background: #8F3925;
@@ -42,7 +58,8 @@
 }
 
 .navegador .opciones {
-    display: grid;                              /* Alinea el contenedor al medio*/ 
+    display: grid;
+    /* Alinea el contenedor al medio*/
     place-items: center;
     height: 50px;
     width: 75%;
@@ -54,14 +71,14 @@
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    color: black ;
+    color: black;
     padding: 7px 52px;
     width: 90%;
     height: 70%;
     border: black solid 1px;
 }
 
-.navegador .opciones a:hover { 
+.navegador .opciones a:hover {
     display: grid;
     place-items: center;
     width: 90%;
@@ -71,7 +88,7 @@
     background: #ccc;
 }
 
-.navegador .logout .button{
+.navegador .logout .button {
     width: 150px;
     background-color: #B07566;
     border: white solid 1px;
