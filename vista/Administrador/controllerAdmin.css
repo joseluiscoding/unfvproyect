@@ -1,0 +1,26 @@
+.cuerpo {
+    margin-top: 2%;
+    width: 83%;
+    font-size: 35px;
+    display: inline-block;
+}
+
+.cuerpo h1{
+    text-align: center;
+}
+
+.cuerpo .opcAdmin{
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 20%;
+}
+
+.cuerpo .opcAdmin .boton{
+    width: 100%;
+    margin-top: 12%;
+    padding: 20px ;
+    background-color: white;
+    font-size: 30px;
+    color: black;
+    
+}
