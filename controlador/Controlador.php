@@ -15,16 +15,24 @@ case 1:                                                                         
     $obj->setContraseña($contraseña_formulario);                                    //envio la contraseña que ingrese en el index
 
     $objUserDao = new UsuarioDao();                                                 //creo otro objeto - instancia de una clase
-    $estaRegistado = $objUserDao -> estaRegistradoUsuario($obj);                      //Almacena una variable booleana dependeiendo de si el correo cumple con la funcion esta registrado
-
-    if($estaRegistado == 1){                                                                             //si es verdadero
-        $pagina="../vista/Administrador/controllerAdministrar.html";                                //asigna esa direccion a la variable $pagina
-    } else if ($estaRegistado == 0){
-        $pagina = "../index.html?error=1";    
-                                                                       //si es falso
+    $tipoUsuario = $objUserDao->estaRegistradoUsuario($obj);                        //Almacena una variable booleana dependeiendo de si el correo cumple con la funcion esta registrado
+    
+    if ($tipoUsuario) {
+        switch ($tipoUsuario) {
+            case 'Administrador':
+                $pagina = "../vista/Administrador/OpcionesAdmin/vistaAdministrar/controllerAdministrar.html";
+                break;
+            case 'Alumno':
+                $pagina = "#";
+                break;
+            case 'Docente':
+                $pagina = "#";
+                break;
+        }
+    } else {
+        $pagina = "../index.html?error=1";                                          // Usuario o contraseña incorrectos
     }
     break;
-
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona

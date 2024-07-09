@@ -9,14 +9,14 @@ class UsuarioDao{
         $con = $objc->getConexionBD();                                      //se crea una variable para saber si se pudo conectar a la base de datos
         $sql = "SELECT * FROM usuario WHERE BINARY correo='" .$usuobj->getCorreo()."' AND contraseña='" . $usuobj->getContraseña()."'";       //comando que se va a ejecutar en el sql y saber si hay valores
         $rs = mysqli_query($con,$sql);                                                                                                      //realiza la consulta con la inforamacion de si se pudo conectar a la BD y el comando a ejecutar
-        
-        if(mysqli_num_rows($rs) == 1) {                                                                                                     //busca en la tabla si coincide un valor
-            return true;                                                                                                                    //devuelve verdadero
+
+        if (mysqli_num_rows($rs) == 1) {                                                                                                    //busca en la tabla si coincide un valor
+            $row = mysqli_fetch_assoc($rs);
+            return $row['tipoUsuario'];
         } else {
-            return false;                                                                                                                   //devuelve falso
+            return false;
         }
     }
-    
-}
 
+}
 ?>
