@@ -1,7 +1,5 @@
-
 <?php
-
-class UsuarioBean{
+class UsuarioBean {
     public $correo;
     public $contraseña;
 
@@ -25,5 +23,4 @@ class UsuarioBean{
         return $this->correo;
     }
 }
-
 ?>

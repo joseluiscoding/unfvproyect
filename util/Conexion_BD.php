@@ -1,5 +1,6 @@
-<?php                                                               // Declaración de la clase Conexion_BD
-class ConexionBD
+<?php
+                                                              
+class ConexionBD                                                      // Declaración de la clase Conexion_BD
 {
     // Declaración de constantes para la conexión a la base de datos
     const servidor = "localhost";                                     // Servidor de la base de datos
