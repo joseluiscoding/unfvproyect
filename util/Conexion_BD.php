@@ -16,7 +16,7 @@ class ConexionBD                                                      // Declara
     {
         try                                                         // Intentamos establecer una conexión a la base de datos utilizando las constantes definidas
         {  
-            $this->cn = mysqli_connect(self::servidor, self::usuario, self::password, self::bd); 
+            $this->cn = mysqli_connect(self::servidor, self::usuario, self::password, self::bd);    //pasa informacion para conectarse a la base de datos
         } 
         catch (Exception $e)                                        // En caso de error en la conexión, no se toma ninguna acción en este ejemplo
         {
