@@ -6,7 +6,6 @@
 
 body {
     font-family: "Poppins", sans-serif;
-
 }
 
 .header {
@@ -53,8 +52,8 @@ body {
     width: 17%;
     height: 86.4vh;
     background: #8F3925;
-    float: left;
     position: relative;
+    display: inline-block;
 }
 
 .navegador .opciones {
