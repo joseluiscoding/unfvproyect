@@ -5,7 +5,115 @@
     height: 86.4vh;
 }
 
+.cuerpo .contenedor {
+    /* display: flex;
+    justify-content: center; */
+}
+
 .cuerpo .section1 {
-    width: 83%;
-    background-color: blue;
+    width: 95%;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+.logoDocentes {
+    height: 45px;
+    margin-right: 15px;
+}
+
+.cuerpo .section1 .title {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.cuerpo .section1 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 12px;
+}
+
+.cuerpo .section1 form span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.cuerpo .section1 form .form-group {
+    margin-top: 15px;
+}
+
+.controls {
+    width: 380px;
+    background:#F4F5F3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    background:#F4F5F3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.cuerpo .section1 form .boton {
+    width: 100px;
+    height: 50px;
+    background-color: #8F3925;
+    border: none;
+    padding: 12px;
+    font-size: 17px;
+    color: white;
+    margin-top: 47px;
+}
+
+hr {
+    width: 100%;
+    margin: auto; 
+    border: 0.1px solid gray;
+    display: block;
+}
+
+.cuerpo .section2 {
+    padding: 20px;
+}
+
+.cuerpo .section2 form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 12px;
+}
+
+.filtrador {
+    width: 380px;
+    background:#F4F5F3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.cuerpo .section2 form .boton {
+    width: 100px;
+    height: 50px;
+    background-color: #8F3925;
+    border: none;
+    padding: 12px;
+    font-size: 17px;
+    color: white;
+    align-items: center;
 }
