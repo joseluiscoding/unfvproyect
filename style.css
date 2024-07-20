@@ -33,6 +33,9 @@ body {
 }
 
 .navegador .opciones {
+    display: grid;
+    /* Alinea el contenedor al medio*/
+    place-items: center;
     height: 50px;
     width: 75%;
     margin-top: 20px;
@@ -40,6 +43,7 @@ body {
 }
 
 .navegador .opciones a {
+    text-align: center;
     text-decoration: none;
     font-size: 20px;
     color: black;
@@ -47,7 +51,6 @@ body {
     width: 90%;
     height: 70%;
     border: black solid 1px;
-    display: inline-block;
 }
 
 .navegador .opciones a:hover {
