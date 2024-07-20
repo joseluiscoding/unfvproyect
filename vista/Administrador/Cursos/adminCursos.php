@@ -33,7 +33,33 @@
     </nav>
     
     <main class="cuerpo">
-       
+        <div class="contenedor">
+                <div class="section1">
+                    <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Cursos </div>
+                    <form action="">
+                        <div class="form-group">
+                            <span>Cod Curso</span>
+                            <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el código del curso">
+                        </div>
+                        <div class="form-group">
+                            <span>Nombre del Curso</span>
+                            <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el nombre del curso">
+                        </div>   
+                        <input class="boton" type="button" value="Guardar" onclick="">
+                    </form>
+                    <hr>
+                </div>
+                
+                <div class="section2">
+                    <form action="">
+                        <div class="form-group">
+                            <input class="filtrador" type="text" name="text" id="text" placeholder="Filtrar por curso">
+                        </div>
+                        <input class="boton" type="button" value="Eliminar" onclick="">
+                    </form>
+
+                </div>
+        </div>
     </main>
 </body>
 </html>
