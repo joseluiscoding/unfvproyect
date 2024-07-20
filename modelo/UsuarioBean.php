@@ -1,7 +1,13 @@
 <?php
 class UsuarioBean {
+    public $id;                                     //creo una atributo id publico
     public $correo;                                 //creo una atributo correo publico
     public $contraseña;                             //creo una atributo contraseña publico
+    
+    public function setId($id)                      //recibo el parametro (el id del formulario)
+    {
+        $this->id = $id;                            //guardo el correo del formulario en mi atributo $id
+    }
 
     public function setCorreo($correo)              //recibo el parametro (el correo del formulario)
     {
@@ -11,6 +17,11 @@ class UsuarioBean {
     public function setContraseña($contraseña)      //recibo el parametro (la contraseña del formulario)
     {
         $this->contraseña = $contraseña;            //guardo la contraseña del formulario en mi atributo $contraseña
+    }
+
+    public function getId()                     //devuelve el valor del atributo $id
+    {
+        return $this->id;
     }
 
     public function getCorreo()                     //devuelve el valor del atributo $correo

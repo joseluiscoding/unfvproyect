@@ -17,7 +17,52 @@ class UsuarioDao{
             return false;
         }
     }
-}
 
+    public function AddUsers(UsuarioBean $objUsers){
+        try {
+            $sql="INSERT INTO usuario(correo,contraseña) 
+                  VALUES('$objUsers->correo','$objUsers->contraseña');";
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            mysqli_close($cn);
+        } catch (Exception $e) {
+    
+        }
+        return $rs;
+    }
+
+    public function ListUsers(){
+        try {
+            $sql="SELECT * FROM usuario;";
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            $list=array();
+    
+            while($row=mysqli_fetch_assoc($rs)){
+                array_push($list,array('id'=>$row['id'],'tipoUsuario'=>$row['tipoUsuario'],'correo'=>$row['correo'],
+                'contraseña'=>$row['contraseña'],'edad'=>$row['edad']));
+            }
+            mysqli_close($cn);
+        } catch (Exception $e) {
+    
+        }
+        return $list;
+    }
+
+    public function RemoveUsers(UsuarioBean  $objUsers){
+        try {
+            $sql="DELETE FROM usuario WHERE id='$objUsers->id';";
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            mysqli_close($cn);
+        } catch (Exception $e) {
+    
+        }
+        return $rs;
+    }
+}
 
 ?>

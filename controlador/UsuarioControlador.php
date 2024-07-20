@@ -1,40 +1,50 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 require_once '../modelo/UsuarioDao.php';
 require_once '../modelo/UsuarioBean.php';
-$op = $_GET['op'];
+
+$op=$_GET["op"];
+$objUserDao=new UsuarioDao();
 
 switch ($op) {
-
-case 1:                                                                             //cuando op toma el valor de 1
-
-    $correo_formulario = $_GET['correo'];                                           //se guarda el correo ingresado de index
-    $contraseña_formulario = $_GET['contraseña'];                                   //se guarda la contraseña ingresada de index
-    
-    $obj = new UsuarioBean();                                                       //un objeto - instancia de una clase
-    $obj->setCorreo($correo_formulario);                                            //envio el correo que ingrese en el index
-    $obj->setContraseña($contraseña_formulario);                                    //envio la contraseña que ingrese en el index
-
-    $objUserDao = new UsuarioDao();                                                 //creo otro objeto - instancia de una clase
-    $tipoUsuario = $objUserDao->estaRegistradoUsuario($obj);                        //Almacena una variable booleana dependeiendo de si el correo cumple con la funcion esta registrado
-    
-    if ($tipoUsuario) {
-        switch ($tipoUsuario) {
-            case 'Administrador':
-                $pagina = "../vista/Administrador/DashboardAdmin/inicioAdministrar.html";
-                break;
-            case 'Alumno':
-                $pagina = "#";
-                break;
-            case 'Docente':
-                $pagina = "#";
-                break;
+    case 1:{                                    //Add
+        $password=$_GET["Password"];
+        $email=$_GET["Email"];
+        $objUserBean=new UsuarioBean();
+        $objUserBean->setCorreo($email);
+        $objUserBean->setContraseña($password);
+        
+        $res=$objUserDao->AddUsers($objUserBean);                   
+        if ($res==1) {
+            $men="Record Inserted Correctly";
         }
-    } else {
-        $pagina = "../index.html?error=1";                                          // Usuario o contraseña incorrectos
+        else {
+            $men="Error inserting the record";
+        }
+        $response["state"]=$men;
+        echo json_encode($response);
+        break;
     }
-    break;
+
+    case 2:{                                    //Listar Usuario
+        $list=$objUserDao->ListUsers();
+        echo json_encode($list);
+        break;
+    }
+
+    case 3:{
+        $id=$_GET["id"];
+        $objUserBean=new UsuarioBean();
+        $objUserBean->setId($id);
+        $res=$objUserDao->RemoveUsers($objUserBean);
+        if ($res==1) {
+            $men="Record Correctly Deleted";
+        }
+        else {
+            $men="Error when deleting the record";
+        }
+        $response["state"]=$men;
+        echo json_encode($response);
+        break;
+    }
 }
-
-header('Location:' . $pagina);                                                      //me redirecciona
-
-?>
