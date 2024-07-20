@@ -20,7 +20,7 @@ case 1:                                                                         
     if ($tipoUsuario) {
         switch ($tipoUsuario) {
             case 'Administrador':
-                $pagina = "../vista/Administrador/DashboardAdmin/inicioAdministrar";
+                $pagina = "../vista/Administrador/DashboardAdmin/inicioAdministrar.html";
                 break;
             case 'Alumno':
                 $pagina = "#";
