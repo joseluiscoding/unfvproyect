@@ -47,4 +47,13 @@ switch ($op) {
         echo json_encode($response);
         break;
     }
+
+    case 4:{                                    //filtrar por id
+        $user=$_GET["id"];
+        $objUserBean=new UsuarioBean();
+        $objUserBean->setId($user);
+        $list=$objUserDao->FilterUserId($objUserBean);
+        echo json_encode($list);
+        break;
+    }
 }

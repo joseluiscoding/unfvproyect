@@ -63,6 +63,25 @@ class UsuarioDao{
         }
         return $rs;
     }
+
+    public function FilterUserId(UsuarioBean $objUsers){
+        try {
+            $sql="SELECT * FROM usuario where id='$objUsers->id';";
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            $list=array();
+    
+            while($row=mysqli_fetch_assoc($rs)){
+                array_push($list,array('id'=>$row['id'],'tipoUsuario'=>$row['tipoUsuario'],'correo'=>$row['correo'],
+                'contraseña'=>$row['contraseña'],'edad'=>$row['edad']));
+            }
+            mysqli_close($cn);
+        } catch (Exception $e) {
+    
+        }
+        return $list;
+    }
 }
 
 ?>
