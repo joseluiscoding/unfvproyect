@@ -8,8 +8,8 @@ $objUserDao=new UsuarioDao();
 
 switch ($op) {
     case 1:{                                    //Add
-        $password=$_GET["Password"];
         $email=$_GET["Email"];
+        $password=$_GET["Password"];                
         $objUserBean=new UsuarioBean();
         $objUserBean->setCorreo($email);
         $objUserBean->setContraseña($password);
@@ -26,7 +26,7 @@ switch ($op) {
         break;
     }
 
-    case 2:{                                    //Listar Usuario
+    case 2:{                                    //Listar Usuarios
         $list=$objUserDao->ListUsers();
         echo json_encode($list);
         break;
