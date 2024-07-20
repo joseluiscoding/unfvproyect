@@ -20,17 +20,17 @@ case 1:                                                                         
     if ($tipoUsuario) {
         switch ($tipoUsuario) {
             case 'Administrador':
-                $pagina = "../vista/Administrador/DashboardAdmin/inicioAdministrar.html";
+                $pagina = "../vista/Administrador/DashboardAdmin/inicioAdministrar.php";
                 break;
             case 'Alumno':
-                $pagina = "#";
+                $pagina = "../vista/Usuario/DashboardUsuario/inicioUsuario.php";
                 break;
             case 'Docente':
                 $pagina = "#";
                 break;
         }
     } else {
-        $pagina = "../index.html?error=1";                                          // Usuario o contraseña incorrectos
+        $pagina = "../index.php?error=1";                                          // Usuario o contraseña incorrectos
     }
     break;
 }

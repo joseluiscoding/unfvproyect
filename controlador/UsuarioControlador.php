@@ -32,7 +32,7 @@ switch ($op) {
         break;
     }
 
-    case 3:{
+    case 3:{                                    //Borrar Usuario
         $id=$_GET["id"];
         $objUserBean=new UsuarioBean();
         $objUserBean->setId($id);

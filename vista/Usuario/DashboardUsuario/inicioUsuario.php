@@ -15,17 +15,17 @@
     
     <nav class="navegador">
         <div class="opciones">
-            <a href="../DashboardUsuario/inicioUsuario.html">Inicio</a>
+            <a href="../DashboardUsuario/inicioUsuario.php">Inicio</a>
         </div>
         <div class="opciones">
-            <a href="#">Horarios</a>
+            <a href="../vistaHorario/Horario.php">Horarios</a>
         </div>
         <div class="opciones">
-            <a href="#">Docentes</a>
+            <a href="../vistaDocentes/Docentes.php">Docentes</a>
         </div>
 
         <div class="logout" >
-            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.html'">
+            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.php'">
         </div>
     </nav>
 

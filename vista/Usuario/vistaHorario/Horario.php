@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horarios</title>
 
-    <link rel="stylesheet" type="text/css" href="../../../../style.css" tittle="style"/>
+    <link rel="stylesheet" type="text/css" href="../../../style.css" tittle="style"/>
     <link rel="stylesheet" type="text/css" href="Horario.css" tittle="style"/>
 </head>
 <body>
     <header class="header">
-        <img src="../../../../imagenes/unfv-logo.png">
+        <img src="../../../imagenes/unfv-logo.png">
     </header>    
     <nav class="navegador">
         <div class="opciones">
-            <a href="../vistaAdministrar/controllerAdministrar.html">Administrar</a>
+            <a href="../DashboardUsuario/inicioUsuario.php">Inicio</a>
         </div>
         <div class="opciones">
-            <a href="../vistaHorario/Horario.html">Horarios</a>
+            <a href="../vistaHorario/Horario.php">Horarios</a>
         </div>
         <div class="opciones">
-            <a href="../vistaDocentes/Docentes.html">Docentes</a>
+            <a href="../vistaDocentes/Docentes.php">Docentes</a>
         </div>
 
         <div class="logout" >
-            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../../index.html'">
+            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.php'">
         </div>
     </nav>
     <main class="menu">

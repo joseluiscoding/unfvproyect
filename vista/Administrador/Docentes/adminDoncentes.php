@@ -15,20 +15,20 @@
     
     <nav class="navegador">
         <div class="opciones">
-            <a href="../DashboardAdmin/inicioAdministrar.html">Inicio</a>
+            <a href="../DashboardAdmin/inicioAdministrar.php">Inicio</a>
         </div>
         <div class="opciones">
-            <a href="#"><img src="../../../imagenes/teacher.png" alt="logDocentes">Docentes</a>
+            <a href="../Docentes/adminDoncentes.php">Docentes</a>
         </div>
         <div class="opciones">
-            <a href="#"><img src="../../../imagenes/cursos.png" alt="logCursos">Cursos</a>
+            <a href="../Cursos/adminCursos.php">Cursos</a>
         </div>
         <div class="opciones">
-            <a href="#"><img src="../../../imagenes/horarios.png" alt="logHorarios">Horarios</a>
+            <a href="#">Horarios</a>
         </div>
 
         <div class="logout" >
-            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.html'">
+            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.php'">
         </div>
     </nav>
     
