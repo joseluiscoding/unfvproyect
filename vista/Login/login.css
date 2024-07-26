@@ -50,10 +50,15 @@
 }
 
 .form-login .textoAcuerdos {
-    height: 40px;
+    height: 30px;
     text-align: center;
     font-size: 15px;
-    text-decoration: none;
+}
+
+.form-login .crearCuenta {
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .form-login a {

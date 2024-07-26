@@ -35,6 +35,7 @@
                 <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
                 <p class="textoAcuerdos"> Estoy de acuerdo con <a href="#">Términos y Condiciones</a> </p>
                 <input class="boton" type="button" value="Ingresar" onclick="ingresar()">
+                <p class="crearCuenta"><a href="vista/Login/register.php">¿No tienes una cuenta?</a></p>
             </form>
         </section>
     </div>
