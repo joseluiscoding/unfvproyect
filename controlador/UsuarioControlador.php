@@ -32,6 +32,8 @@ switch ($op) {
         $response["state"]=$men;
         echo json_encode($response);
         break;
+
+        $pagina = "../index.php";
     }
 
     case 2:{                                    //Listar Usuarios
@@ -64,4 +66,8 @@ switch ($op) {
         echo json_encode($list);
         break;
     }
+
+    header('Location:' . $pagina);   
 }
+
+?>

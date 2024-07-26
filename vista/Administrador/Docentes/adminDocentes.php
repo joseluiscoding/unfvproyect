@@ -7,17 +7,9 @@
 
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminDocentes.css">
+
+    <script >src="../../../util/mysql-connector.js"></script>
     
-    <script>
-
-    function btnGuardar(){
-        document.form.action = "../../../controlador/adminControlador.php";           //me redirecciona a la direccion ...
-        document.form.method = "GET";                                   //metodo de envio
-        document.form.op.value = "1";                                   //op va a ser 1
-        document.form.submit();                                         //para enviar
-    }
-
-    </script>
 </head>
 <body>
     <header class="header">
@@ -29,7 +21,7 @@
             <a href="../DashboardAdmin/inicioAdministrar.php">Inicio</a>
         </div>
         <div class="opciones">
-            <a href="../Docentes/adminDoncentes.php">Docentes</a>
+            <a href="../Docentes/adminDocentes.php">Docentes</a>
         </div>
         <div class="opciones">
             <a href="../Cursos/adminCursos.php">Cursos</a>
@@ -68,7 +60,7 @@
                             <label for="image"> IMG </label>
                         </button>
                     </div>
-                    <input class="boton" type="button" value="Guardar" onclick="btnGuardar()">
+                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarCursos()">
                 </form>
 
                 <hr>
@@ -84,6 +76,38 @@
 
             </div>
        </div>
+       
+        <div id="buscador"><input class="busqueda" name="txtbuscador" type="text" placeholder="Filtrar"></div>
+        
+        <?php
+            include_once '../../util/Conexion.php';
+            $objc =  new ConnectionBD();
+            $cn = $objc->getConnectionBD();
+            $sql = "SELECT * FROM docentes";
+            $rs = mysqli_query($cn,$sql);
+        ?>
+        <table>
+            <tr>
+                <th>Id
+                <th>Nombre
+                <th>Apellido
+                <th>Correo
+            </tr>
+
+            <?php 
+                while($resultado = mysqli_fetch_array($rs)){
+            ?>
+            <tr>
+                <td><?php echo $resultado['Id']  ?> </td>
+                <td><?php echo $resultado['Nombre']  ?> </td>
+                <td><?php echo $resultado['Apellido']  ?> </td>
+                <td><?php echo $resultado['Correo']  ?> </td>
+            </tr>
+
+            <?php }?>
+
+        </table>
+
     </main>
 </body>
 </html>

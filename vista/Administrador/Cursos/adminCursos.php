@@ -18,7 +18,7 @@
             <a href="../DashboardAdmin/inicioAdministrar.php">Inicio</a>
         </div>
         <div class="opciones">
-            <a href="../Docentes/adminDoncentes.php">Docentes</a>
+            <a href="../Docentes/adminDocentes.php">Docentes</a>
         </div>
         <div class="opciones">
             <a href="../Cursos/adminCursos.php">Cursos</a>
