@@ -20,8 +20,7 @@ class UsuarioDao{
 
     public function AddUsers(UsuarioBean $objUsers){
         try {
-            $sql="INSERT INTO usuario(correo,contraseña) 
-                  VALUES('$objUsers->correo','$objUsers->contraseña');";
+            $sql="INSERT INTO usuario(tipoUsuario,nombresUsuario,apellidosUsuario,correo,contraseña) VALUES('$objUsers->tipoUsuario','$objUsers->nombresUsuario','$objUsers->apellidosUsuario','$objUsers->correo','$objUsers->contraseña');";
             $objc=new ConexionBD();
             $cn=$objc->getConexionBD();
             $rs=mysqli_query($cn,$sql);

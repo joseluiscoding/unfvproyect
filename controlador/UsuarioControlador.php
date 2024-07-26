@@ -15,9 +15,9 @@ switch ($op) {
         $password=$_GET["Password"];
         
         $objUserBean=new UsuarioBean();
-        $objUserBean->settipoUsuario($email);
-        $objUserBean->setnombresUsuario($password);
-        $objUserBean->setapellidosUsuario($email);
+        $objUserBean->settipoUsuario($tipoUsuario);
+        $objUserBean->setnombresUsuario($nombres);
+        $objUserBean->setapellidosUsuario($apellidos);
         $objUserBean->setCorreo($email);
         $objUserBean->setContraseña($password);
         

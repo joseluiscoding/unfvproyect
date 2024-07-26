@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../style.css" title="style"/>
     <link rel="stylesheet" type="text/css" href="login.css" title="style"/>
 
-    <script src="util/mysql-connector.js"></script>
+    <script src="../../util/mysql-connector.js"></script>
 </head>
 <body>
     
@@ -29,19 +29,19 @@
                 <input type="hidden" name="op">
                 <h2> CREAR CUENTA </h2>
                 <h3> Tipo de Usuario: </h3>
-                <select class="controls" name="tipoUsuario" id="">
+                <select class="controls" name="TipoUsuario">
                     <option disabled selected="">Seleccione una opción</option>
                     <option value="Docente">Docente</option>
                     <option value="Alumno">Alumno</option>
                 </select>
                 <h3> Nombres </h3>
-                <input class="controls" type= "text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres">
+                <input class="controls" type= "text" name="Nombres" id="nombres" placeholder="Ingrese sus Nombres">
                 <h3> Apellidos </h3>
-                <input class="controls" type= "text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
+                <input class="controls" type= "text" name="Apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
                 <h3> Correo </h3>
-                <input class="controls" type= "email" name="correo" id="correo" placeholder="Ingrese su correo">
+                <input class="controls" type= "email" name="Email" id="correo" placeholder="Ingrese su correo">
                 <h3> Contraseña </h3>
-                <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese sus Apellidos">
+                <input class="controls" type= "password" name="Password" id="contraseña" placeholder="Ingrese sus Apellidos">
 
                 <input class="boton" type="button" value="Registrar" onclick="registrarUsuario()">
             </form>
