@@ -76,13 +76,11 @@
 
             </div>
        </div>
-       
-        <div id="buscador"><input class="busqueda" name="txtbuscador" type="text" placeholder="Filtrar"></div>
         
         <?php
-            include_once '../../util/Conexion.php';
-            $objc =  new ConnectionBD();
-            $cn = $objc->getConnectionBD();
+            include_once '../../../util/Conexion_BD.php';
+            $objc =  new ConexionBD();
+            $cn = $objc->getConexionBD();
             $sql = "SELECT * FROM docentes";
             $rs = mysqli_query($cn,$sql);
         ?>
@@ -98,10 +96,10 @@
                 while($resultado = mysqli_fetch_array($rs)){
             ?>
             <tr>
-                <td><?php echo $resultado['Id']  ?> </td>
-                <td><?php echo $resultado['Nombre']  ?> </td>
-                <td><?php echo $resultado['Apellido']  ?> </td>
-                <td><?php echo $resultado['Correo']  ?> </td>
+                <td><?php echo $resultado['idDocente']  ?> </td>
+                <td><?php echo $resultado['nombresDocente']  ?> </td>
+                <td><?php echo $resultado['apellidosDocente']  ?> </td>
+                <td><?php echo $resultado['correoDocente']  ?> </td>
             </tr>
 
             <?php }?>
