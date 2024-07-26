@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminDocentes.css">
 
-    <script >src="../../../util/mysql-connector.js"></script>
+    <script src="../../../util/mysql-connector.js"></script>
     
 </head>
 <body>
