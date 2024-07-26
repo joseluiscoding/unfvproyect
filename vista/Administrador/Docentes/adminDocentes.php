@@ -27,7 +27,7 @@
             <a href="../Cursos/adminCursos.php">Cursos</a>
         </div>
         <div class="opciones">
-            <a href="#">Horarios</a>
+            <a href="../Horario/adminHorario.php">Horarios</a>
         </div>
 
         <div class="logout" >
