@@ -7,19 +7,27 @@ $op=$_GET["op"];
 $objUserDao=new UsuarioDao();
 
 switch ($op) {
-    case 1:{                                    //Add
+    case 1:{                                    //Registrar Usuario
+        $tipoUsuario=$_GET["TipoUsuario"];
+        $nombres=$_GET["Nombres"];
+        $apellidos=$_GET["Apellidos"];
         $email=$_GET["Email"];
-        $password=$_GET["Password"];                
+        $password=$_GET["Password"];
+        
         $objUserBean=new UsuarioBean();
+        $objUserBean->settipoUsuario($email);
+        $objUserBean->setnombresUsuario($password);
+        $objUserBean->setapellidosUsuario($email);
         $objUserBean->setCorreo($email);
         $objUserBean->setContraseña($password);
         
+        
         $res=$objUserDao->AddUsers($objUserBean);                   
         if ($res==1) {
-            $men="Record Inserted Correctly";
+            $men="Usuario Registrado Correctamente";
         }
         else {
-            $men="Error inserting the record";
+            $men="Error al Registrar Usuario";
         }
         $response["state"]=$men;
         echo json_encode($response);

@@ -35,15 +35,15 @@
                     <option value="Alumno">Alumno</option>
                 </select>
                 <h3> Nombres </h3>
-                <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese sus Nombres">
+                <input class="controls" type= "text" name="nombres" id="nombres" placeholder="Ingrese sus Nombres">
                 <h3> Apellidos </h3>
-                <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese sus Apellidos">
+                <input class="controls" type= "text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos">
                 <h3> Correo </h3>
                 <input class="controls" type= "email" name="correo" id="correo" placeholder="Ingrese su correo">
                 <h3> Contraseña </h3>
                 <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese sus Apellidos">
 
-                <input class="boton" type="button" value="Registrar" onclick="RegistrarUsuario()">
+                <input class="boton" type="button" value="Registrar" onclick="registrarUsuario()">
             </form>
         </section>
     </div>

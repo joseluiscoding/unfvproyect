@@ -3,6 +3,9 @@ class UsuarioBean {
     public $id;                                     //creo una atributo id publico
     public $correo;                                 //creo una atributo correo publico
     public $contraseña;                             //creo una atributo contraseña publico
+    public $tipoUsuario;
+    public $nombresUsuario;
+    public $apellidosUsuario;
     
     public function setId($id)                      //recibo el parametro (el id del formulario)
     {
@@ -19,6 +22,22 @@ class UsuarioBean {
         $this->contraseña = $contraseña;            //guardo la contraseña del formulario en mi atributo $contraseña
     }
 
+    public function settipoUsuario($tipoUsuario)      
+    {
+        $this->tipoUsuario = $tipoUsuario;            
+    }
+
+    public function setnombresUsuario($nombresUsuario)      
+    {
+        $this->nombresUsuario = $nombresUsuario;            
+    }
+
+    public function setapellidosUsuario($apellidosUsuario)      
+    {
+        $this->apellidosUsuario = $apellidosUsuario;            
+    }
+
+
     public function getId()                     //devuelve el valor del atributo $id
     {
         return $this->id;
@@ -33,5 +52,21 @@ class UsuarioBean {
     {
         return $this->contraseña;        
     }
+
+    public function gettipoUsuario()
+    {
+        return $this->tipoUsuario;
+    }
+    
+    public function getnombresUsuario()
+    {
+        return $this->nombresUsuario;
+    }
+    
+    public function getapellidosUsuario()
+    {
+        return $this->apellidosUsuario;
+    }
+
 }
 ?>
