@@ -5,19 +5,19 @@ $op = $_GET['op'];
 
 switch ($op) {
 
-case 1:                                                                             //cuando op toma el valor de 1
+case 1:                                                                            
       
-    $Nombre = $_GET['Nombre'];                                           //se guarda el correo ingresado de index
+    $Nombre = $_GET['Nombre'];                                          
     $Apellido = $_GET['Apellido'];  
     $Correo = $_GET['Correo'];  
 
-    $obj = new AdminBean();                                                       //un objeto - instancia de una clase
-    $obj->setNombre($Nombre);                                           //envio el correo que ingrese en el index
+    $obj = new AdminBean();                                                     
+    $obj->setNombre($Nombre);                                          
     $obj->setApellido($Apellido);   
     $obj->setCorreo($Correo);  
 
 
-    $objDao = new AdminDao();                                                 //creo otro objeto - instancia de una clase
+    $objDao = new AdminDao();                                              
     $objDao->guardarDocentes($obj);
     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     
