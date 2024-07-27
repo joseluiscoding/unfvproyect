@@ -88,7 +88,7 @@
                             </button>
                         </div>
                         
-                        <input class="boton" type="button" value="Guardar" onclick="btnGuardarCursos()">
+                        <input class="boton" type="button" value="Guardar" onclick="btnGuardarDocentes()">
                 </form>
                 <hr>
             </div>

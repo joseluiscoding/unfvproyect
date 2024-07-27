@@ -21,6 +21,17 @@ case 1:                                                                         
     $objDao->guardarDocentes($obj);
     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     
+case 2:
+    $CodCurso = $_GET['CodCurso'];                                          
+    $NombreCurso = $_GET['NombreCurso'];
+    
+    $obj = new AdminBean();                                                     
+    $obj->setCodCurso($CodCurso);                                          
+    $obj->setNombreCurso($NombreCurso);  
+    
+    $objDao = new AdminDao();                                              
+    $objDao->guardarCursos($obj);
+    $pagina = "../vista/Administrador/Cursos/adminCursos.php";
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona

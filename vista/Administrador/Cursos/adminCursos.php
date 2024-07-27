@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminCursos.css">
+
+    <script src="../../../util/mysql-connector.js"></script>
 </head>
 
 <body>
@@ -63,7 +65,7 @@
         <div class="contenedor">
             <div class="section1">
                 <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Cursos </div>
-                    <form action="">
+                    <form name="form">
                         <div class="form-group">
                             <span>Cod Curso</span>
                             <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el código del curso">
@@ -72,7 +74,7 @@
                             <span>Nombre del Curso</span>
                             <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el nombre del curso">
                         </div>   
-                        <input class="boton" type="button" value="Guardar" onclick="">
+                        <input class="boton" type="button" value="Guardar" onclick="btnGuardarCursos()">
                     </form>
                 <hr>
             </div>
