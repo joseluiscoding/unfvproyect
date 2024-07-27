@@ -35,53 +35,45 @@
     <main class="cuerpo">
        <div class="contenedor">
             <div class="section1">
-                <div class="title"> <img class=" logoHorario" src="../../../imagenes/horarios.png" alt="logHorarios"> Horarios </div>
+                <div class="title"> <img class=" logoHorario" src="../../../imagenes/horarios.png" alt="logoHorarios"> Horarios </div>
+                
                 <form name="form">
                     <input type="hidden" name="op">
                     <div class="form-group">
                         <span>Docente</span>
-                        <input class="controls" type="text" name="" id="text" placeholder="Ingrese el Docente">
+                        <input class="controls" type="text" id="Docente" name="" >
                     </div>
                     <div class="form-group">
                         <span>Curso</span>
-                        <input class="controls" type="text" name="" id="text" placeholder="Ingrese el curso">
+                        <input class="controls" type="text" id="Curso" name="" >
                     </div>
                     <div class="form-group">
                         <span>Aula</span>
-                        <input class="controls" type="text" name="" id="text" placeholder="Ingrese Correo">
+                        <input class="controls" type="text" id="Aula" name="" >
                     </div>
                     <div class="form-group">
                         <span>Sección</span>
-                        <input class="controls" type="text" id="text" placeholder="Ingrese la Sección">
+                        <input class="controls" type="text" id="Seccion">
                     </div>
                     <div class="form-group">
-                        <span>Día</span>
-                        <input class="controls" type="text" id="text" placeholder="Ingrese el día de la semana">
+                        <span>Día de la Semana</span>
+                        <input class="controls" type="text" id="Dia" >
                     </div>
                     <div class="form-group">
                         <span>Hora Inicio</span>
-                        <input class="controls" type="text" id="text" placeholder="Ingrese la hora de inicio">
+                        <input class="controls" type="text" id="HoraInicio" >
                     </div>
                     <div class="form-group">
                         <span>Hora Fin</span>
-                        <input class="controls" type="text" id="text" placeholder="Ingrese la hora de fin">
+                        <input class="controls" type="text" id="HoraFin" >
                     </div>
 
-                    <input class="boton" type="button" value="Guardar Horario" onclick="">
+                    <input class="boton" type="button" value="Guardar" onclick="">
                 </form>
 
                 <hr>
             </div>
             
-            <div class="section2">
-                <form action="">
-                    <div class="form-group">
-                        <input class="filtrador" type="text" name="text" id="text" placeholder="Buscar">
-                    </div>
-                    <input class="boton" type="button" value="Eliminar" onclick="">
-                </form>
-
-            </div>
        </div>
     </main>
 </body>

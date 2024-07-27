@@ -5,13 +5,18 @@
     height: 86.4vh;
 }
 
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
 .cuerpo .section1 {
-    width: 95%;
+    width: 1300px;
     padding: 20px;
     margin-top: 35px;
 }
 
-.logoDocentes {
+.logoHorario {
     height: 45px;
     margin-right: 15px;
 }
@@ -24,6 +29,7 @@
 }
 
 .cuerpo .section1 form {
+    width: 1200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -39,10 +45,10 @@
 
 .cuerpo .section1 form .form-group {
     margin-top: 15px;
+    margin-right: 20px;
 }
 
 .controls {
-    width: 380px;
     background:#F4F5F3;
     padding: 10px;
     border-radius: 4px;
@@ -52,15 +58,32 @@
     font-size: 20px;
 }
 
-button {
-    width: 100%;
-    background:#F4F5F3;
-    padding: 10px;
-    border-radius: 4px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    font-size: 20px;
+#Docente {
+    width: 400px;
+}
+
+#Curso {
+    width: 350px;
+}
+
+#Aula {
+    width: 100px;
+}
+
+#Seccion {
+    width: 70px;
+}
+
+#Dia {
+    width: 200px;
+}
+
+#HoraInicio {
+    width: 120px;
+}
+
+#HoraFin {
+    width: 120px;
 }
 
 .cuerpo .section1 form .boton {
