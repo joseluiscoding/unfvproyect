@@ -5,6 +5,12 @@
     height: 86.4vh;
 }
 
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .cuerpo .section1 {
     width: 95%;
     padding: 20px;
@@ -86,9 +92,11 @@ hr {
 }
 
 .cuerpo .section2 form {
+    width: 500px;
     display: flex;
     flex-wrap: wrap;
     margin: 10px 12px;
+    justify-content: space-between;
 }
 
 .filtrador {

@@ -36,46 +36,48 @@
     </nav>
     
     <main class="cuerpo">
-       <div class="contenedor">
-            <div class="section1">
+        <div class="contenedor">
+            <div class="section1"> 
                 <div class="title"> <img class=" logoDocentes" src="../../../imagenes/teacher.png" alt="logDocentes"> Docentes </div>
                 <form name="form">
                     <input type="hidden" name="op">
-                    <div class="form-group">
-                        <span>Nombres</span>
-                        <input class="controls" type="text" name="Nombre" id="text" placeholder="Ingrese Nombre">
-                    </div>
-                    <div class="form-group">
-                        <span>Apellidos</span>
-                        <input class="controls" type="text" name="Apellido" id="text" placeholder="Ingrese Apellido">
-                    </div>
-                    <div class="form-group">
-                        <span>Correo</span>
-                        <input class="controls" type="correo" name="Correo" id="correo" placeholder="Ingrese Correo">
-                    </div>
-                    <div class="form-group">
-                        <span>Foto</span>
-                        <input class="controls" type="file" name="image" id="image" style="display: none">
-                        <button>
-                            <label for="image"> IMG </label>
-                        </button>
-                    </div>
-                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarCursos()">
+                        <div class="form-group">
+                            <span>Nombres</span>
+                            <input class="controls" type="text" name="Nombre" id="text" placeholder="Ingrese Nombre">
+                        </div>
+                        <div class="form-group">
+                            <span>Apellidos</span>
+                            <input class="controls" type="text" name="Apellido" id="text" placeholder="Ingrese Apellido">
+                        </div>
+                        <div class="form-group">
+                            <span>Correo</span>
+                            <input class="controls" type="correo" name="Correo" id="correo" placeholder="Ingrese Correo">
+                        </div>
+                        <div class="form-group">
+                            <span>Foto</span>
+                            <input class="controls" type="file" name="image" id="image" style="display: none">
+                            <button>
+                                <label for="image"> IMG </label>
+                            </button>
+                        </div>
+                        
+                        <input class="boton" type="button" value="Guardar" onclick="btnGuardarCursos()">
                 </form>
-
                 <hr>
             </div>
-            
-            <div class="section2">
-                <form action="">
-                    <div class="form-group">
-                        <input class="filtrador" type="text" name="text" id="text" placeholder="Buscar">
-                    </div>
-                    <input class="boton" type="button" value="Eliminar" onclick="">
-                </form>
+        </div>
 
-            </div>
-       </div>
+        
+        <div class="section2">
+            <form action="">
+                <div class="form-group">
+                    <input class="filtrador" type="text" name="text" id="text" placeholder="Buscar">
+                </div>
+                <input class="boton" type="button" value="Eliminar" onclick="">
+            </form>
+        </div>
+    
+        
         
         <?php
             include_once '../../../util/Conexion_BD.php';
@@ -84,27 +86,29 @@
             $sql = "SELECT * FROM docentes";
             $rs = mysqli_query($cn,$sql);
         ?>
-        <table>
-            <tr>
-                <th>Id
-                <th>Nombre
-                <th>Apellido
-                <th>Correo
-            </tr>
-
-            <?php 
-                while($resultado = mysqli_fetch_array($rs)){
-            ?>
-            <tr>
-                <td><?php echo $resultado['idDocente']  ?> </td>
-                <td><?php echo $resultado['nombresDocente']  ?> </td>
-                <td><?php echo $resultado['apellidosDocente']  ?> </td>
-                <td><?php echo $resultado['correoDocente']  ?> </td>
-            </tr>
-
-            <?php }?>
-
-        </table>
+        <div class="contenedor">
+            <table>
+                <tr>
+                    <th>Id
+                    <th>Nombre
+                    <th>Apellido
+                    <th>Correo
+                </tr>
+            
+                <?php 
+                    while($resultado = mysqli_fetch_array($rs)){
+                ?>
+                <tr>
+                    <td><?php echo $resultado['idDocente']  ?> </td>
+                    <td><?php echo $resultado['nombresDocente']  ?> </td>
+                    <td><?php echo $resultado['apellidosDocente']  ?> </td>
+                    <td><?php echo $resultado['correoDocente']  ?> </td>
+                </tr>
+            
+                <?php }?>
+            
+            </table>
+        </div>
 
     </main>
 </body>
