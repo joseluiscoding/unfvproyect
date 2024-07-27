@@ -68,6 +68,7 @@
                 <div class="title"> <img class=" logoDocentes" src="../../../imagenes/teacher.png" alt="logDocentes"> Docentes </div>
                 <form name="form">
                     <input type="hidden" name="op">
+                        
                         <div class="form-group">
                             <span>Nombres</span>
                             <input class="controls" type="text" name="Nombre" placeholder="Ingrese Nombre">
@@ -88,7 +89,7 @@
                             </button>
                         </div>
                         
-                        <input class="boton" type="button" value="Guardar" onclick="btnGuardarDocentes()">
+                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarDocentes()">
                 </form>
                 <hr>
             </div>
@@ -96,7 +97,7 @@
 
         
         <div class="section2">
-            <form action="">
+            <form>
                 <div class="form-group">
                     <input class="filtrador" type="text" name="text" id="text" placeholder="Buscar">
                 </div>
