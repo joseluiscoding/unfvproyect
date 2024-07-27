@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="sidebar__item">
-                <a class="sidebar__link" href="">
+                <a class="sidebar__link" href="../vistaDocentes/Docentes.php">
                     <i class="sidebar__icon fa-solid fa-chalkboard-user"></i>
                     <span class="sidebar__text">Docentes</span>
                 </a>

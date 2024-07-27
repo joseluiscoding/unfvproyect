@@ -5,29 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docentes</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" /> <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" tittle="style"/>
     <link rel="stylesheet" type="text/css" href="Docentes.css" tittle="style"/>
 </head>
 <body>
-    <header class="header">
-        <img src="../../../imagenes/unfv-logo.png">
-    </header>    
-    <nav class="navegador">
-        <div class="opciones">
-            <a href="../DashboardUsuario/inicioUsuario.php">Inicio</a>
-        </div>
-        <div class="opciones">
-            <a href="../vistaHorario/Horario.php">Horarios</a>
-        </div>
-        <div class="opciones">
-            <a href="../vistaDocentes/Docentes.php">Docentes</a>
-        </div>
+    <aside class="sidebar">
+        <ul class="sidebar__list">
+            <li class="sidebar__item">
+                <a class="sidebar__link-logo">
+                    <img src="../../../imagenes/unfv-logo.png" alt="logo">
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a class="sidebar__link" href="../DashboardUsuario/inicioUsuario.php">
+                    <i class="sidebar__icon fa-solid fa-house"></i>
+                    <span class="sidebar__text">Inicio</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a class="sidebar__link" href="">
+                    <i class="sidebar__icon fa-solid fa-chalkboard-user"></i>
+                    <span class="sidebar__text">Docentes</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a class="sidebar__link" href="">
+                    <i class="sidebar__icon fa-solid fa-calendar-days"></i>
+                    <span class="sidebar__text">Horarios</span>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a class="sidebar__link sidebar__link--logout" href="../../../index.php">
+                    <i class="sidebar__icon fa-solid fa-right-from-bracket"></i>
+                    <span class="sidebar__text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main class="main">
+        
+        <header class="main__header">
+            <h1 class="main__title"></h1>
+            <button class="main__button">
+                <i class="main__icon fa-solid fa-user"></i>
+                <span class="main__text">Cuenta</span>
+            </button>
+        </header>
 
-        <div class="logout" >
-            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.php'">
-        </div>
-    </nav>
-    <main class="menu">
         <div id="buscador"><input class="busqueda" name="txtbuscador" type="text" placeholder="Buscar"></div>
         <div id="contenedor">
             <section class="seccionuno">
