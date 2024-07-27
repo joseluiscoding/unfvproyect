@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="sidebar__item">
-                <a class="sidebar__link" href="../DashboardAdmin/inicioAdministrar.php">
+                <a class="sidebar__link" href="../DashboardUsuario/inicioUsuario.php">
                     <i class="sidebar__icon fa-solid fa-house"></i>
                     <span class="sidebar__text">Inicio</span>
                 </a>
