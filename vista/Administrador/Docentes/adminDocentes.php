@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminDoncentes</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
-    <!-- Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="adminDocentes.css">
 
     <script src="../../../util/mysql-connector.js"></script>
@@ -55,6 +54,7 @@
     </aside>
 
     <main class="main">
+        
         <header class="main__header">
             <h1 class="main__title"></h1>
             <button class="main__button">
@@ -62,6 +62,7 @@
                 <span class="main__text">Cuenta</span>
             </button>
         </header>
+
         <div class="contenedor">
             <div class="section1"> 
                 <div class="title"> <img class=" logoDocentes" src="../../../imagenes/teacher.png" alt="logDocentes"> Docentes </div>

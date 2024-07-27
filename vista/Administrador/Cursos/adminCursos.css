@@ -1,11 +1,10 @@
-.cuerpo {
-    position: absolute;
+
+.main {
     display: inline-block;
-    width: 83%;
-    height: 86.4vh;
+    width: 100%;
 }
 
-.cuerpo .section1 {
+.main .section1 {
     width: 95%;
     padding: 20px;
     margin-top: 35px;
@@ -16,28 +15,28 @@
     margin-right: 15px;
 }
 
-.cuerpo .section1 .title {
+.main .section1 .title {
     font-size: 30px;
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-.cuerpo .section1 form {
+.main .section1 form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 10px 12px;
 }
 
-.cuerpo .section1 form span {
+.main .section1 form span {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
 }
 
-.cuerpo .section1 form .form-group {
+.main .section1 form .form-group {
     margin-top: 15px;
 }
 
@@ -63,7 +62,7 @@ button {
     font-size: 20px;
 }
 
-.cuerpo .section1 form .boton {
+.main .section1 form .boton {
     width: 100px;
     height: 50px;
     background-color: #8F3925;
@@ -81,11 +80,11 @@ hr {
     display: block;
 }
 
-.cuerpo .section2 {
+.main .section2 {
     padding: 20px;
 }
 
-.cuerpo .section2 form {
+.main .section2 form {
     display: flex;
     flex-wrap: wrap;
     margin: 10px 12px;
@@ -102,7 +101,7 @@ hr {
     font-size: 20px;
 }
 
-.cuerpo .section2 form .boton {
+.main .section2 form .boton {
     width: 100px;
     height: 50px;
     background-color: #8F3925;
