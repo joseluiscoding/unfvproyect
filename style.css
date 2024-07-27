@@ -14,9 +14,8 @@ body {
     display: flex;
 }
 
-.sidebar{
+.sidebar {
     background-color: #964022;
-    /* position: sticky; */
     height: 100vh;
     width: 100px;
     transition: 1s;
@@ -27,8 +26,7 @@ body {
     width: 250px;
 }
 
-.sidebar:hover .sidebar__icon,
-.sidebar:hover .sidebar__text{
+.sidebar:hover .sidebar__icon, .sidebar:hover .sidebar__text{
     transition: 0.2s;
 }
 
@@ -36,7 +34,7 @@ body {
     width: 200px;
     margin: 20px 24px;
     position: relative;
-    z-index: calc(1);
+    z-index: calc(1); /*para que el logo se quede en el header*/
 }
 
 .sidebar__link {
@@ -82,9 +80,9 @@ body {
 /* ------------------------------- MAIN ------------------------------- */
 .main {
     position: relative;
-    background-color: white;
     width: 100%;
     background-image: url("imagenes/imgFondo.png");
+    background-attachment: fixed, scroll;
 }
 
 .main__header {

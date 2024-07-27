@@ -14,10 +14,10 @@
     <link rel="stylesheet" type="text/css" href="inicioAdministrar.css" title="style"/>
 </head>
 <body>
-<aside class="sidebar">
+    <aside class="sidebar">
         <ul class="sidebar__list">
             <li class="sidebar__item">
-                <a class="sidebar__link-logo" href="">
+                <a class="sidebar__link-logo">
                     <img src="../../../imagenes/unfv-logo.png" alt="logo">
                 </a>
             </li>
@@ -63,69 +63,5 @@
             </button>
         </header>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <header class="header">
-        <img src="../../../imagenes/unfv-logo.png">
-    </header>
-    
-    <nav class="navegador">
-        <div class="opciones">
-            <a href="../DashboardAdmin/inicioAdministrar.php">Inicio</a>
-        </div>
-        <div class="opciones">
-            <a href="../Docentes/adminDocentes.php">Docentes</a>
-        </div>
-        <div class="opciones">
-            <a href="../Cursos/adminCursos.php">Cursos</a>
-        </div>
-        <div class="opciones">
-            <a href="../Horario/adminHorario.php">Horarios</a>
-        </div>
-
-
-        <div class="logout" >
-            <input class="button" value="Cerrar Sesión" onclick="location.href='../../../index.php'">
-        </div>
-    </nav>
-
-    <main class="cuerpo">
-        
-    </main> -->
 </body>
 </html>
