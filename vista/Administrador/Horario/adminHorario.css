@@ -26,7 +26,7 @@
 }
 
 .main .section1 form {
-    width: 1200px;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
