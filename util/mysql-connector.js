@@ -24,5 +24,4 @@ function btnGuardarCursos(){
     document.form.method = "GET";                               
     document.form.op.value = "2";                                
     document.form.submit();     
-
 }

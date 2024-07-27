@@ -20,8 +20,10 @@ case 1:                                                                         
     $objDao = new AdminDao();                                              
     $objDao->guardarDocentes($obj);
     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
+    break;
     
 case 2:
+
     $CodCurso = $_GET['CodCurso'];                                          
     $NombreCurso = $_GET['NombreCurso'];
     
@@ -32,6 +34,7 @@ case 2:
     $objDao = new AdminDao();                                              
     $objDao->guardarCursos($obj);
     $pagina = "../vista/Administrador/Cursos/adminCursos.php";
+    break;
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona
