@@ -5,7 +5,7 @@ $op = $_GET['op'];
 
 switch ($op) {
 
-case 1:                                                                            
+case 1:                                                                         //Registrar Docentes                
       
     $Nombre = $_GET['Nombre'];                                          
     $Apellido = $_GET['Apellido'];  
