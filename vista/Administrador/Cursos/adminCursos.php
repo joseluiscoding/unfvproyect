@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminCursos.css">
 </head>
-<body>
 
+<body>
     <aside class="sidebar">
         <ul class="sidebar__list">
             <li class="sidebar__item">
@@ -60,21 +60,23 @@
             </button>
         </header>
         
-        <div class="section1">
-                <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Cursos </div>
-                <form action="">
-                    <div class="form-group">
-                        <span>Cod Curso</span>
-                        <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el código del curso">
-                    </div>
-                    <div class="form-group">
-                        <span>Nombre del Curso</span>
-                        <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el nombre del curso">
-                    </div>   
-                    <input class="boton" type="button" value="Guardar" onclick="">
-                </form>
-                <hr>
-            </div>
+        <div class="contenedor">
+            <div class="section1">
+                    <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Cursos </div>
+                    <form action="">
+                        <div class="form-group">
+                            <span>Cod Curso</span>
+                            <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el código del curso">
+                        </div>
+                        <div class="form-group">
+                            <span>Nombre del Curso</span>
+                            <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el nombre del curso">
+                        </div>   
+                        <input class="boton" type="button" value="Guardar" onclick="">
+                    </form>
+                    <hr>
+                </div>
+        </div>
                 
             <div class="section2">
                 <form action="">

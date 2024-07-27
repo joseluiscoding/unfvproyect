@@ -1,5 +1,4 @@
 .main {
-    display: inline-block;
     width: 100%;
 }
 
@@ -93,7 +92,7 @@ hr {
 .main .section2 form {
     width: 500px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     margin: 10px 12px;
