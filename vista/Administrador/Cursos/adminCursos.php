@@ -62,7 +62,7 @@
         
         <div class="contenedor">
             <div class="section1">
-                    <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Cursos </div>
+                <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Cursos </div>
                     <form action="">
                         <div class="form-group">
                             <span>Cod Curso</span>
@@ -74,8 +74,8 @@
                         </div>   
                         <input class="boton" type="button" value="Guardar" onclick="">
                     </form>
-                    <hr>
-                </div>
+                <hr>
+            </div>
         </div>
                 
             <div class="section2">
