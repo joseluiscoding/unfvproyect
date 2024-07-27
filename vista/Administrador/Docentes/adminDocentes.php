@@ -70,19 +70,19 @@
                     <input type="hidden" name="op">
                         <div class="form-group">
                             <span>Nombres</span>
-                            <input class="controls" type="text" name="Nombre" id="text" placeholder="Ingrese Nombre">
+                            <input class="controls" type="text" name="Nombre" placeholder="Ingrese Nombre">
                         </div>
                         <div class="form-group">
                             <span>Apellidos</span>
-                            <input class="controls" type="text" name="Apellido" id="text" placeholder="Ingrese Apellido">
+                            <input class="controls" type="text" name="Apellido" placeholder="Ingrese Apellido">
                         </div>
                         <div class="form-group">
                             <span>Correo</span>
-                            <input class="controls" type="correo" name="Correo" id="correo" placeholder="Ingrese Correo">
+                            <input class="controls" type="correo" name="Correo" placeholder="Ingrese Correo">
                         </div>
                         <div class="form-group">
                             <span>Foto</span>
-                            <input class="controls" type="file" name="image" id="image" style="display: none">
+                            <input class="controls" type="file" name="image" style="display: none">
                             <button>
                                 <label for="image"> IMG </label>
                             </button>
