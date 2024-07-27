@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<aside class="sidebar">
+    <aside class="sidebar">
         <ul class="sidebar__list">
             <li class="sidebar__item">
                 <a class="sidebar__link-logo">
