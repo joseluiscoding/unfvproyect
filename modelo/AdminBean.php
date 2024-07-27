@@ -51,7 +51,7 @@ class AdminBean {
         return $this->CodCurso;        
     }
 
-    public function NombreCurso()           
+    public function getNombreCurso()           
     {
         return $this->NombreCurso;        
     }
