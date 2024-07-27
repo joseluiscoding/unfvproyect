@@ -11,6 +11,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .main .section1 {

@@ -31,6 +31,8 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #964022;
+    position: fixed;
+    padding-right: 120px;
 }
 
 .main__button{
