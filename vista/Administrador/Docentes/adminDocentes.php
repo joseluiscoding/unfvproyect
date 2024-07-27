@@ -138,9 +138,5 @@
         </div>
     </main>
     
-    <main class="cuerpo">
-        
-
-    </main>
 </body>
 </html>
