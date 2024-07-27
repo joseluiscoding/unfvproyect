@@ -69,11 +69,11 @@
                     <input type="hidden" name="op">
                         <div class="form-group">
                             <span>Cod Curso</span>
-                            <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el código del curso">
+                            <input class="controls" type="text" name="CodCurso" placeholder="Ingrese el código del curso">
                         </div>
                         <div class="form-group">
                             <span>Nombre del Curso</span>
-                            <input class="controls" type="text" name="text" id="text" placeholder="Ingrese el nombre del curso">
+                            <input class="controls" type="text" name="NombreCurso" placeholder="Ingrese el nombre del curso">
                         </div>   
                         
                         <input class="boton" type="button" value="Guardar" onclick="btnGuardarCursos()">
