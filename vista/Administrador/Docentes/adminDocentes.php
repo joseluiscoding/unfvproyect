@@ -121,6 +121,8 @@
                     <th>Nombre
                     <th>Apellido
                     <th>Correo
+                    <th>Editar
+                    <th>Eliminar
                 </tr>
             
                 <?php 

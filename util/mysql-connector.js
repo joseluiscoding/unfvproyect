@@ -13,14 +13,14 @@ function registrarUsuario(){
 }
 
 function btnGuardarDocentes(){
-    document.form.action = "../../../controlador/adminControlador.php";
+    document.form.action = "../../../controlador/docenteControlador.php";
     document.form.method = "GET";                               
     document.form.op.value = "1";                                
     document.form.submit();                                         
 }
 
 function btnGuardarCursos(){
-    document.form.action = "../../../controlador/adminControlador.php";
+    document.form.action = "../../../controlador/docenteControlador.php";
     document.form.method = "GET";                               
     document.form.op.value = "2";                                
     document.form.submit();     

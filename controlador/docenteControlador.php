@@ -35,6 +35,45 @@ case 2:
     $objDao->guardarCursos($obj);
     $pagina = "../vista/Administrador/Cursos/adminCursos.php";
     break;
+
+case 3:{
+    $id=$_GET["idProduct"];
+    $nameProduct=$_GET["Name"];
+    $description=$_GET["Description"];
+    $stock=$_GET["Stock"];
+    $price=$_GET["Price"];
+    $objProductBean=new ProductBean();
+    $objProductBean->setId($id);
+    $objProductBean->setNameProduct($nameProduct);
+    $objProductBean->setDescription($description);
+    $objProductBean->setStock($stock);
+    $objProductBean->setPrice($price);
+    $res=$objProductDao->UpdateProducts($objProductBean);
+    if ($res==1) {
+        $men="Registration Correctly Updated";
+    }
+    else {
+        $men="Error updating the registry";
+    }
+    $response["state"]=$men;
+    echo json_encode($response);
+    break;
+}
+case 4:{
+    $id=$_GET["idProduct"];
+    $objProductBean=new ProductBean();
+    $objProductBean->setId($id);
+    $res=$objProductDao->RemoveProducts($objProductBean);
+    if ($res==1) {
+        $men="Record Correctly Deleted";
+    }
+    else {
+        $men="Error when deleting the record";
+    }
+    $response["state"]=$men;
+    echo json_encode($response);
+    break;
+}
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona
