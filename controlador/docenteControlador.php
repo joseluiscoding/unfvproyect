@@ -23,20 +23,6 @@ case 1:                                                                         
     break;
     
 case 2:
-
-    $CodCurso = $_GET['CodCurso'];                                          
-    $NombreCurso = $_GET['NombreCurso'];
-    
-    $obj = new AdminBean();                                                     
-    $obj->setCodCurso($CodCurso);                                          
-    $obj->setNombreCurso($NombreCurso);  
-    
-    $objDao = new AdminDao();                                              
-    $objDao->guardarCursos($obj);
-    $pagina = "../vista/Administrador/Cursos/adminCursos.php";
-    break;
-
-case 3:{
     $id=$_GET["idProduct"];
     $nameProduct=$_GET["Name"];
     $description=$_GET["Description"];
@@ -58,8 +44,8 @@ case 3:{
     $response["state"]=$men;
     echo json_encode($response);
     break;
-}
-case 4:{
+
+case 3:
     $id=$_GET["idProduct"];
     $objProductBean=new ProductBean();
     $objProductBean->setId($id);
@@ -73,7 +59,7 @@ case 4:{
     $response["state"]=$men;
     echo json_encode($response);
     break;
-}
+
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona

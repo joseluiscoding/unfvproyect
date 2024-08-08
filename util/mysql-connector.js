@@ -20,8 +20,8 @@ function btnGuardarDocentes(){
 }
 
 function btnGuardarCursos(){
-    document.form.action = "../../../controlador/docenteControlador.php";
+    document.form.action = "../../../controlador/cursoControlador.php";
     document.form.method = "GET";                               
-    document.form.op.value = "2";                                
+    document.form.op.value = "1";                                
     document.form.submit();     
 }
