@@ -1,6 +1,6 @@
 <?php
-require_once '../modelo/AdminDao.php';
-require_once '../modelo/AdminBean.php';
+require_once '../modelo/CursosDao.php';
+require_once '../modelo/CursosBean.php';
 $op = $_GET['op'];
 
 switch ($op) {
@@ -10,11 +10,11 @@ switch ($op) {
         $CodCurso = $_GET['CodCurso'];                          //Añadir curso                                          
         $NombreCurso = $_GET['NombreCurso'];
         
-        $obj = new AdminBean();                                                     
+        $obj = new CursosBean();                                                     
         $obj->setCodCurso($CodCurso);                                          
         $obj->setNombreCurso($NombreCurso);  
         
-        $objDao = new AdminDao();                                              
+        $objDao = new CursosDao();                                              
         $objDao->guardarCursos($obj);
         $pagina = "../vista/Administrador/Cursos/adminCursos.php";
         break;

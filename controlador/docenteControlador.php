@@ -1,6 +1,6 @@
 <?php
-require_once '../modelo/AdminDao.php';
-require_once '../modelo/AdminBean.php';
+require_once '../modelo/DocentesDao.php';
+require_once '../modelo/DocentesBean.php';
 $op = $_GET['op'];
 
 switch ($op) {
@@ -11,13 +11,13 @@ case 1:                                                                         
     $Apellido = $_GET['Apellido'];  
     $Correo = $_GET['Correo'];  
 
-    $obj = new AdminBean();                                                     
+    $obj = new DocentesBean();                                                     
     $obj->setNombre($Nombre);                                          
     $obj->setApellido($Apellido);   
     $obj->setCorreo($Correo);  
 
 
-    $objDao = new AdminDao();                                              
+    $objDao = new DocentesDao();                                              
     $objDao->guardarDocentes($obj);
     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     break;
@@ -28,7 +28,7 @@ case 2:
     $description=$_GET["Description"];
     $stock=$_GET["Stock"];
     $price=$_GET["Price"];
-    $objProductBean=new ProductBean();
+    $objProductBean=new DocentesBean();
     $objProductBean->setId($id);
     $objProductBean->setNameProduct($nameProduct);
     $objProductBean->setDescription($description);
@@ -47,10 +47,10 @@ case 2:
 
 case 3:
     $id=$_GET["idDocente"];
-    $objAdminBean=new AdminBean();
-    $objAdminBean->setIdDocente($id);
-    $objAdminDao = new AdminDao();   
-    $res=$objAdminDao->EliminarDocente($objAdminBean);
+    $objDocentesBean=new DocentesBean();
+    $objDocentesBean->setIdDocente($id);
+    $objDocentesDao = new DocentesDao();   
+    $res=$objDocentesDao->EliminarDocente($objDocentesBean);
     if ($res==1) {
         $men="Docente eliminado correctamente";
     }

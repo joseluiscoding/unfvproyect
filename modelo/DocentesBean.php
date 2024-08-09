@@ -1,11 +1,10 @@
 <?php
-class AdminBean {
+class DocentesBean {
+    
     public $IdDocente;
-    public $Nombre;                               //del docente
-    public $Apellido;                             //del docente
-    public $Correo;                               //del docente
-    public $CodCurso;                             //del curso
-    public $NombreCurso;                          //del curso
+    public $Nombre;                            
+    public $Apellido;                            
+    public $Correo;                               
     
     public function setIdDocente($IdDocente)                  
     {
@@ -25,16 +24,6 @@ class AdminBean {
     public function setCorreo($Correo)     
     {
         $this->Correo = $Correo;           
-    }
-
-    public function setCodCurso($CodCurso)                  
-    {
-        $this->CodCurso = $CodCurso;                        
-    }
-
-    public function setNombreCurso($NombreCurso)                  
-    {
-        $this->NombreCurso = $NombreCurso;                        
     }
 
     public function getIdDocente()                     
@@ -57,14 +46,5 @@ class AdminBean {
         return $this->Correo;        
     }
 
-    public function getCodCurso()           
-    {
-        return $this->CodCurso;        
-    }
-
-    public function getNombreCurso()           
-    {
-        return $this->NombreCurso;        
-    }
 }
 ?>
