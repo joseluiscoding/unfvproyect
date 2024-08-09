@@ -3,7 +3,7 @@
 require_once 'DocentesBean.php';                                                //importo la direccion para usar metodos
 require_once '../util/Conexion_BD.php';                                         //importo la direccion para usar metodos para la conexion a la base de datos
 
-class AdminDao{
+class DocentesDao{
 
     public function guardarDocentes(DocentesBean $objDocentes){
         try{
@@ -15,6 +15,20 @@ class AdminDao{
             mysqli_close($cn);
         }catch (Exception $e){
 
+        }
+        return $rs;
+    }
+
+    public function ActualizarDocente(DocentesBean $objDocentes){
+        try {
+            $sql="UPDATE user SET nombresDocente='$objDocentes->Nombre'', apellidosDocente='$objDocentes->Apellido',correoDocente='$objDocentes->Correo'";
+            
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            mysqli_close($cn);
+        } catch (Exception $e) {
+    
         }
         return $rs;
     }

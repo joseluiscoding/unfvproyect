@@ -16,36 +16,42 @@ case 1:                                                                         
     $obj->setApellido($Apellido);   
     $obj->setCorreo($Correo);  
 
-
     $objDao = new DocentesDao();                                              
     $objDao->guardarDocentes($obj);
+    
     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     break;
     
-case 2:
-    $id=$_GET["idProduct"];
-    $nameProduct=$_GET["Name"];
-    $description=$_GET["Description"];
-    $stock=$_GET["Stock"];
-    $price=$_GET["Price"];
-    $objProductBean=new DocentesBean();
-    $objProductBean->setId($id);
-    $objProductBean->setNameProduct($nameProduct);
-    $objProductBean->setDescription($description);
-    $objProductBean->setStock($stock);
-    $objProductBean->setPrice($price);
-    $res=$objProductDao->UpdateProducts($objProductBean);
+case 2:                                                                         //Editar Docentes
+
+    $id=$_GET["idDocente"];
+    $nombreDocentes=$_GET["Nombre"];
+    $apellidoDocentes=$_GET["Apellido"];
+    $correoDocentes=$_GET["Correo"];
+    
+    $objDocentesBean=new DocentesBean();
+    
+    $objDocentesBean->setId($id);
+    $objDocentesBean->setNombre($nombreDocentes);
+    $objDocentesBean->setApellido($apellidoDocentes);
+    $objDocentesBean->setCorreo($correoDocentes);
+    
+    $res=$objDocentesDao->ActualizarDocente($objDocentesBean);
+
     if ($res==1) {
-        $men="Registration Correctly Updated";
+        $men="Datos del docente actualizados";
     }
     else {
-        $men="Error updating the registry";
+        $men="Error al actualizar datos del docente";
     }
     $response["state"]=$men;
     echo json_encode($response);
+
+    $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     break;
 
-case 3:
+case 3:                                                                         //Eliminar Docentes
+
     $id=$_GET["idDocente"];
     $objDocentesBean=new DocentesBean();
     $objDocentesBean->setIdDocente($id);
@@ -59,6 +65,8 @@ case 3:
     }
     $response["state"]=$men;
     echo json_encode($response);
+    
+    $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     break;
 }
 
