@@ -21,7 +21,7 @@ class DocentesDao{
 
     public function ActualizarDocente(DocentesBean $objDocentes){
         try {
-            $sql="UPDATE user SET nombresDocente='$objDocentes->Nombre'', apellidosDocente='$objDocentes->Apellido',correoDocente='$objDocentes->Correo'";
+            $sql="UPDATE docentes SET nombresDocente='$objDocentes->Nombre', apellidosDocente='$objDocentes->Apellido',correoDocente='$objDocentes->Correo' WHERE idDocente='$objDocentes->IdDocente'";
             
             $objc=new ConexionBD();
             $cn=$objc->getConexionBD();

@@ -63,8 +63,39 @@
             </button>
         </header>
 
+        <div class="contenedor">
+            <div class="section1"> 
+                <div class="title"> <img class=" logoDocentes" src="../../../imagenes/teacher.png" alt="logDocentes"> Actualizar datos del Docente </div>
+                <form name="actualizarDocentes">
+                    <input type="hidden" name="op">
+                        
+                        <div class="form-group">
+                            <span>Nombres</span>
+                            <input class="controls" type="text" name="Nombre" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <span>Apellidos</span>
+                            <input class="controls" type="text" name="Apellido" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <span>Correo</span>
+                            <input class="controls" type="correo" name="Correo" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <span>Foto</span>
+                            <input class="controls" type="file" name="image" style="display: none">
+                            <button>
+                                <label for="image"> IMG </label>
+                            </button>
+                        </div>
+                        
+                    <input class="boton" type="button" value="Guardar" onclick="">
+                </form>
+                <hr>
+            </div>
+        </div>
 
-        
+
     </main>
     
 </body>

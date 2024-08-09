@@ -22,7 +22,7 @@ case 1:                                                                         
     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
     break;
     
-case 2:                                                                         //Editar Docentes
+case 2:                                                                         //Actualizar Docentes
 
     $id=$_GET["idDocente"];
     $nombreDocentes=$_GET["Nombre"];
@@ -31,11 +31,12 @@ case 2:                                                                         
     
     $objDocentesBean=new DocentesBean();
     
-    $objDocentesBean->setId($id);
+    $objDocentesBean->setIdDocente($id);
     $objDocentesBean->setNombre($nombreDocentes);
     $objDocentesBean->setApellido($apellidoDocentes);
     $objDocentesBean->setCorreo($correoDocentes);
     
+    $objDocentesDao = new DocentesDao();  
     $res=$objDocentesDao->ActualizarDocente($objDocentesBean);
 
     if ($res==1) {
@@ -44,6 +45,7 @@ case 2:                                                                         
     else {
         $men="Error al actualizar datos del docente";
     }
+
     $response["state"]=$men;
     echo json_encode($response);
 

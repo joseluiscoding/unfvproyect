@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminDocentes.css">
+    
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
     <script src="../../../util/mysql-connector.js"></script>
+
+    <script> 
+        $(document).ready(function(){
+            let table = new DataTable('#TablaDocentes');
+
+        }
+        );
+    </script>
     
 </head>
 <body>
@@ -95,57 +107,48 @@
             </div>
         </div>
 
-        
         <div class="section2">
-            <form>
-                <div class="form-group">
-                    <input class="filtrador" type="text" name="text" id="text" placeholder="Buscar">
+            <form name="tabla">
+                <input type="hidden" name="op">
+                <input type="hidden" name="idDocente">
+                
+                <?php
+                    include_once '../../../util/Conexion_BD.php';
+                    $objc =  new ConexionBD();
+                    $cn = $objc->getConexionBD();
+                    $sql = "SELECT * FROM docentes";
+                    $rs = mysqli_query($cn,$sql);
+                ?>
+            
+                <div class="contenedor">
+                    <table id="TablaDocentes">
+                        <thead>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Correo</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </thead>
+                    
+                        <?php 
+                            while($resultado = mysqli_fetch_array($rs)){
+                        ?>
+                        <tr>
+                            <td><?php echo $resultado['idDocente']  ?> </td>
+                            <td><?php echo $resultado['nombresDocente']  ?> </td>
+                            <td><?php echo $resultado['apellidosDocente']  ?> </td>
+                            <td><?php echo $resultado['correoDocente']  ?> </td>
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEliminar" height="28px" onclick="location.href=`actualizarDocentes.php`"></td>
+                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
+                        </tr>
+                    
+                        <?php }?>
+                    
+                    </table>
                 </div>
-                <input class="boton" type="button" value="Eliminar" onclick="">
             </form>
         </div>
-    
-        
-        <form name="tabla">
-            <input type="hidden" name="op">
-            <input type="hidden" name="idDocente">
-            
-            <?php
-                include_once '../../../util/Conexion_BD.php';
-                $objc =  new ConexionBD();
-                $cn = $objc->getConexionBD();
-                $sql = "SELECT * FROM docentes";
-                $rs = mysqli_query($cn,$sql);
-            ?>
-        
-            <div class="contenedor">
-                <table>
-                    <tr>
-                        <th>Id
-                        <th>Nombre
-                        <th>Apellido
-                        <th>Correo
-                        <th>Editar
-                        <th>Eliminar
-                    </tr>
-                
-                    <?php 
-                        while($resultado = mysqli_fetch_array($rs)){
-                    ?>
-                    <tr>
-                        <td><?php echo $resultado['idDocente']  ?> </td>
-                        <td><?php echo $resultado['nombresDocente']  ?> </td>
-                        <td><?php echo $resultado['apellidosDocente']  ?> </td>
-                        <td><?php echo $resultado['correoDocente']  ?> </td>
-                        <td><img src="../../../imagenes/BtnEditar.png" alt="btnEliminar" height="28px" onclick="location.href=`actualizarDocentes.php`"></td>
-                        <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
-                    </tr>
-                
-                    <?php }?>
-                
-                </table>
-            </div>
-        </form>
     </main>
     
 </body>
