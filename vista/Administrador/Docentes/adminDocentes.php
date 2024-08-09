@@ -106,39 +106,46 @@
         </div>
     
         
+        <form name="tabla">
+            <input type="hidden" name="op">
+            <input type="hidden" name="idDocente">
+            
+            <?php
+                include_once '../../../util/Conexion_BD.php';
+                $objc =  new ConexionBD();
+                $cn = $objc->getConexionBD();
+                $sql = "SELECT * FROM docentes";
+                $rs = mysqli_query($cn,$sql);
+            ?>
         
-        <?php
-            include_once '../../../util/Conexion_BD.php';
-            $objc =  new ConexionBD();
-            $cn = $objc->getConexionBD();
-            $sql = "SELECT * FROM docentes";
-            $rs = mysqli_query($cn,$sql);
-        ?>
-        <div class="contenedor">
-            <table>
-                <tr>
-                    <th>Id
-                    <th>Nombre
-                    <th>Apellido
-                    <th>Correo
-                    <th>Editar
-                    <th>Eliminar
-                </tr>
-            
-                <?php 
-                    while($resultado = mysqli_fetch_array($rs)){
-                ?>
-                <tr>
-                    <td><?php echo $resultado['idDocente']  ?> </td>
-                    <td><?php echo $resultado['nombresDocente']  ?> </td>
-                    <td><?php echo $resultado['apellidosDocente']  ?> </td>
-                    <td><?php echo $resultado['correoDocente']  ?> </td>
-                </tr>
-            
-                <?php }?>
-            
-            </table>
-        </div>
+            <div class="contenedor">
+                <table>
+                    <tr>
+                        <th>Id
+                        <th>Nombre
+                        <th>Apellido
+                        <th>Correo
+                        <th>Editar
+                        <th>Eliminar
+                    </tr>
+                
+                    <?php 
+                        while($resultado = mysqli_fetch_array($rs)){
+                    ?>
+                    <tr>
+                        <td><?php echo $resultado['idDocente']  ?> </td>
+                        <td><?php echo $resultado['nombresDocente']  ?> </td>
+                        <td><?php echo $resultado['apellidosDocente']  ?> </td>
+                        <td><?php echo $resultado['correoDocente']  ?> </td>
+                        <td><img src="../../../imagenes/BtnEditar.png" alt="btnEliminar" height="28px"></td>
+                        <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
+                    </tr>
+                
+                    <?php }?>
+                
+                </table>
+            </div>
+        </form>
     </main>
     
 </body>

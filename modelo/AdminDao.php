@@ -33,4 +33,17 @@ class AdminDao{
         return $rs;
     }
 
+    public function EliminarDocente(AdminBean $objAdmin){
+        try {
+            $sql="DELETE FROM docentes WHERE idDocente='$objAdmin->IdDocente';";
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            mysqli_close($cn);
+        } catch (Exception $e) {
+    
+        }
+        return $rs;
+    }
+
 }

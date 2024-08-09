@@ -46,20 +46,20 @@ case 2:
     break;
 
 case 3:
-    $id=$_GET["idProduct"];
-    $objProductBean=new ProductBean();
-    $objProductBean->setId($id);
-    $res=$objProductDao->RemoveProducts($objProductBean);
+    $id=$_GET["idDocente"];
+    $objAdminBean=new AdminBean();
+    $objAdminBean->setIdDocente($id);
+    $objAdminDao = new AdminDao();   
+    $res=$objAdminDao->EliminarDocente($objAdminBean);
     if ($res==1) {
-        $men="Record Correctly Deleted";
+        $men="Docente eliminado correctamente";
     }
     else {
-        $men="Error when deleting the record";
+        $men="Error al eliminar al docente";
     }
     $response["state"]=$men;
     echo json_encode($response);
     break;
-
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona

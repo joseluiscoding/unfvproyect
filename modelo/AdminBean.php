@@ -1,10 +1,16 @@
 <?php
 class AdminBean {
+    public $IdDocente;
     public $Nombre;                               //del docente
     public $Apellido;                             //del docente
     public $Correo;                               //del docente
     public $CodCurso;                             //del curso
     public $NombreCurso;                          //del curso
+    
+    public function setIdDocente($IdDocente)                  
+    {
+        $this->IdDocente = $IdDocente;                        
+    }
     
     public function setNombre($Nombre)                  
     {
@@ -29,6 +35,11 @@ class AdminBean {
     public function setNombreCurso($NombreCurso)                  
     {
         $this->NombreCurso = $NombreCurso;                        
+    }
+
+    public function getIdDocente()                     
+    {
+        return $this->IdDocente;
     }
 
     public function getNombre()                     
