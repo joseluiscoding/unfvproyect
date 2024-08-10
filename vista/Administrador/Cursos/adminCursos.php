@@ -9,7 +9,20 @@
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminCursos.css">
 
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
     <script src="../../../util/mysql-connector.js"></script>
+
+    <script> 
+        $(document).ready(function(){
+            let table = new DataTable('#TablaCursos');
+
+        }
+        );
+    </script>
+
 </head>
 
 <body>
@@ -92,7 +105,7 @@
             ?>
             
             <div class="contenedor2">
-                <table>
+                <table id="TablaCursos">
                     <thead>
                         <th>Codigo de Curso</th>
                         <th>Nombre de Curso</th>

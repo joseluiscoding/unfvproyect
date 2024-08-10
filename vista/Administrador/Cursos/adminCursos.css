@@ -93,7 +93,8 @@ hr {
 
 .main .section2 {
     padding: 20px;
-    margin-left: 110px;
+    display: flex;
+    justify-content: center;
 }
 
 .main .section2 form {
@@ -129,8 +130,8 @@ hr {
 
 /*Para la tabla de cursos:*/
 
-table {
-    width: 50%;
+#TablaCursos {
+    width: 1000px;
     color: black;
     font-size: 15px;
     table-layout: fixed;

@@ -120,7 +120,7 @@
                     $rs = mysqli_query($cn,$sql);
                 ?>
             
-                <div class="contenedor">
+                <div class="contenedor2">
                     <table id="TablaDocentes">
                         <thead>
                             <th>Id</th>
