@@ -11,13 +11,14 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .main .section1 {
     width: 95%;
     padding: 20px;
     margin-top: 35px;
-    padding-top: 100px;
+    
 }
 
 .main .logoDocentes {

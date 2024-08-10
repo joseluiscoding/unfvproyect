@@ -22,7 +22,7 @@ function btnGuardarDocentes(){
 function ActualizarDocente(idDocente){
     document.form.action = "../../../controlador/docenteControlador.php";
     document.form.method = "GET";                               
-    document.form.op.value = "3";
+    document.form.op.value = "2";
     document.form.idDocente.value = idDocente;                               
     document.form.submit();     
 }
@@ -40,4 +40,20 @@ function btnGuardarCursos(){
     document.form.method = "GET";                               
     document.form.op.value = "1";                                
     document.form.submit();     
+}
+
+function btnActualizarCursos(codCurso){
+    document.form.action = "../../../controlador/cursoControlador.php";
+    document.form.method = "GET";                               
+    document.form.op.value = "2";
+    document.form.codCurso.value = codCurso;                             
+    document.form.submit();     
+}
+
+function btnEliminarCursos(codCurso){
+    document.tabla.action = "../../../controlador/cursoControlador.php";
+    document.tabla.method = "GET";                               
+    document.tabla.op.value = "3"; 
+    document.tabla.codCurso.value = codCurso;                                    
+    document.tabla.submit();     
 }

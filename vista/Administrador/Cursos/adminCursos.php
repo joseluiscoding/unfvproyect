@@ -83,41 +83,37 @@
         </div>
                 
         <div class="section2">
-            <form action="">
-                <div class="form-group">
-                    <input class="filtrador" type="text" name="text" id="text" placeholder="Filtrar por curso">
-                </div>
-                    <input class="boton" type="button" value="Eliminar" onclick="">
-            </form>
-
-        </div>
-
-        <?php
-            include_once '../../../util/Conexion_BD.php';
-            $objc =  new ConexionBD();
-            $cn = $objc->getConexionBD();
-            $sql = "SELECT * FROM cursos";
-            $rs = mysqli_query($cn,$sql);
-        ?>
-        
-        <div class="contenedor">
-            <table>
-                <tr>
-                    <th>Codigo de Curso
-                    <th>Nombre de Curso
-                </tr>
+            <?php
+                include_once '../../../util/Conexion_BD.php';
+                $objc =  new ConexionBD();
+                $cn = $objc->getConexionBD();
+                $sql = "SELECT * FROM cursos";
+                $rs = mysqli_query($cn,$sql);
+            ?>
             
-                <?php 
-                    while($resultado = mysqli_fetch_array($rs)){
-                ?>
-                <tr>
-                    <td><?php echo $resultado['codCurso']  ?> </td>
-                    <td><?php echo $resultado['nombreCurso']  ?> </td>
-                </tr>
-            
-                <?php }?>
-            
-            </table>
+            <div class="contenedor2">
+                <table>
+                    <thead>
+                        <th>Codigo de Curso</th>
+                        <th>Nombre de Curso</th>
+                        <th>Editar Curso</th>
+                        <th>Eliminar Curso</th>
+                    </thead>
+                
+                    <?php 
+                        while($resultado = mysqli_fetch_array($rs)){
+                    ?>
+                    <tr>
+                        <td><?php echo $resultado['codCurso']  ?> </td>
+                        <td><?php echo $resultado['nombreCurso']  ?> </td>
+                        <td><img src="../../../imagenes/BtnEditar.png" alt="btnEliminar" height="28px" onclick="location.href=`actualizarDocentes.php`"></td>
+                        <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarCurso(<?php echo $resultado['codCurso']  ?>)"></td>
+                    </tr>
+                
+                    <?php }?>
+                
+                </table>
+            </div>
         </div>
         
     </main>
