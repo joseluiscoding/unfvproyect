@@ -11,13 +11,13 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
 }
 
 .main .section1 {
     width: 95%;
     padding: 20px;
     margin-top: 35px;
+    padding-top: 100px;
 }
 
 .main .logoDocentes {
@@ -92,13 +92,14 @@ hr {
 
 .main .section2 {
     padding: 20px;
-    margin-left: 110px;
+    display: flex;
+    justify-content: center;
 }
 
 /*Para la tabla de docentes:*/
 
 #TablaDocentes {
-    width: 80%;
+    width: 1500px;
     color: black;
     font-size: 15px;
     table-layout: fixed;
