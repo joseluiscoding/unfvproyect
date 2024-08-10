@@ -107,3 +107,9 @@ hr {
     border: 0.1px solid gray;
     display: block;
 }
+
+.main .section2 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}

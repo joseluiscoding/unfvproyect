@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar Docente</title>
+    <title>Actualizar Curso</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
-    <link rel="stylesheet" href="adminDocentes.css">
+    <link rel="stylesheet" href="adminCursos.css">
     
-    <?php  $idDocente = $_GET['idDocente']  ?>
+    <?php  $idDocente = $_GET['codCurso']  ?>
     <script src="../../../util/mysql-connector.js"></script>
 </head>
 
@@ -65,39 +65,27 @@
         </header>
 
         <div class="contenedor">
-            <div class="section1"> 
-                <div class="title"> <img class=" logoDocentes" src="../../../imagenes/teacher.png" alt="logDocentes"> Actualizar datos del Docente </div>
-                
-                <form name="form">
+            <div class="section1">
+                <div class="title"> <img class=" logoCursos" src="../../../imagenes/cursos.png" alt="logCursos"> Editar Curso </div>
+                    
+                    <form name="form">
                     <input type="hidden" name="op">
-                    <input type="hidden" name="idDocente" value="<?php echo $idDocente ?>">    
+                    <input type="hidden" name="codCurso" value="<?php echo $codCurso ?>">    
                     
                         <div class="form-group">
-                            <span>Nombres</span>
-                            <input class="controls" type="text" name="Nombre" placeholder="">
+                            <span>Cod Curso</span>
+                            <input class="controls" type="text" name="CodCurso" placeholder="Ingrese el código del curso">
                         </div>
                         <div class="form-group">
-                            <span>Apellidos</span>
-                            <input class="controls" type="text" name="Apellido" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <span>Correo</span>
-                            <input class="controls" type="correo" name="Correo" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <span>Foto</span>
-                            <input class="controls" type="file" name="image" style="display: none">
-                            <button>
-                                <label for="image"> IMG </label>
-                            </button>
-                        </div>
+                            <span>Nombre del Curso</span>
+                            <input class="controls" type="text" name="NombreCurso" placeholder="Ingrese el nombre del curso">
+                        </div>   
                         
-                    <input class="boton" type="button" value="Actualizar" onclick="btnActualizarDocente()">
-                </form>
+                        <input class="boton" type="button" value="Guardar" onclick="btnActualizarCursos()">
+                    </form>
                 <hr>
             </div>
         </div>
-
 
     </main>
     

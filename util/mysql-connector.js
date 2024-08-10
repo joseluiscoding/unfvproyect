@@ -41,11 +41,10 @@ function btnGuardarCursos(){
     document.form.submit();     
 }
 
-function btnActualizarCursos(codCurso){
+function btnActualizarCursos(){
     document.form.action = "../../../controlador/cursoControlador.php";
     document.form.method = "GET";                               
-    document.form.op.value = "2";
-    document.form.codCurso.value = codCurso;                             
+    document.form.op.value = "2";                          
     document.form.submit();     
 }
 

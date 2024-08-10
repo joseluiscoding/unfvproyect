@@ -105,6 +105,7 @@
                     <div class="form-group">
                         <span>Curso</span>
                         <select class="controls">
+                            <option value="" disabled selected>Seleccione un curso</option>
                             <?php
                                 while ($row = mysqli_fetch_array($rs2))
                                 {
