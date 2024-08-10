@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adminHoararios</title>
+    <title>adminHorarios</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" type="text/css" href="adminHorario.css" title="style"/>
+
+    <?php
+        include_once '../../../util/Conexion_BD.php';
+        $objc =  new ConexionBD();
+        $cn = $objc->getConexionBD();
+        $sql = "SELECT * FROM docentes";
+        $rs = mysqli_query($cn,$sql);
+    ?>
+
+<?php
+        include_once '../../../util/Conexion_BD.php';
+        $objc =  new ConexionBD();
+        $cn = $objc->getConexionBD();
+        $sql2 = "SELECT * FROM cursos";
+        $rs2 = mysqli_query($cn,$sql2);
+    ?>
+
 </head>
 <body>
     <aside class="sidebar">
@@ -68,11 +85,37 @@
                     <input type="hidden" name="op">
                     <div class="form-group">
                         <span>Docente</span>
-                        <input class="controls" type="text" id="Docente" name="" >
+    
+                        <select class="controls">
+                            <option value="" disabled selected>Seleccione un docente</option>
+                            <?php
+                                while ($row = mysqli_fetch_array($rs))
+                                {
+                                    $idDocente = $row ['idDocente'];
+                                    $nombresDocente = $row ['nombresDocente'];
+                                    $apellidosDocente = $row ['apellidosDocente'];
+                                ?>
+                                <option value="<?php echo $idDocente ?>"><?php echo $nombresDocente." ".$apellidosDocente;?> </option>
+                                <?php
+                                }
+                            ?>
+                        </select>
                     </div>
+
                     <div class="form-group">
                         <span>Curso</span>
-                        <input class="controls" type="text" id="Curso" name="" >
+                        <select class="controls">
+                            <?php
+                                while ($row = mysqli_fetch_array($rs2))
+                                {
+                                    $codCurso = $row ['codCurso'];
+                                    $nombreCurso = $row ['nombreCurso'];
+                                ?>
+                                <option value="<?php echo $codCurso ?>"><?php echo $nombreCurso;?> </option>
+                                <?php
+                                }
+                            ?>
+                        </select>
                     </div>
                     <div class="form-group">
                         <span>Aula</span>
