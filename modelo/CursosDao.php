@@ -36,6 +36,7 @@ class CursosDao{
     public function EliminarCurso(CursosBean $objCursos){
         try {
             $sql="DELETE FROM cursos WHERE codCurso='$objCursos->CodCurso'";
+        
             $objc=new ConexionBD();
             $cn=$objc->getConexionBD();
             $rs=mysqli_query($cn,$sql);

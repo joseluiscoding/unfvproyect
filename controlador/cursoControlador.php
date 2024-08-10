@@ -7,7 +7,7 @@ switch ($op) {
     
     case 1: 
 
-        $CodCurso = $_GET['CodCurso'];                          //Añadir curso                                          
+        $CodCurso = $_GET['CodCurso'];                                              //Añadir curso                                          
         $NombreCurso = $_GET['NombreCurso'];
         
         $obj = new CursosBean();                                                     
@@ -18,7 +18,59 @@ switch ($op) {
         $objDao->guardarCursos($obj);
         $pagina = "../vista/Administrador/Cursos/adminCursos.php";
         break;
-    
-}
+        
+    case 2:                                                                         //Actualizar Curso
 
-header('Location:' . $pagina);                                                      //me redirecciona
+        $CodCurso = $_GET['CodCurso'];                                                                                
+        $NombreCurso = $_GET['NombreCurso'];
+        
+        $obj = new CursosBean();
+            
+        $obj->setCodCurso($CodCurso);                                          
+        $obj->setNombreCurso($NombreCurso);  
+            
+        $objDao = new CursosDao();  
+        
+        $res=$objDao->ActualizarCurso($obj);
+        
+            if ($res==1) {
+                $men="Datos del Curso Actualizado";
+            }
+            else {
+                $men="Error al actualizar datos del curso";
+            }
+        
+            $response["state"]=$men;
+            echo json_encode($response);
+        
+            $pagina = "../vista/Administrador/Cursos/adminCursos.php";
+            break;
+        
+    case 3:                                                                         //Eliminar Curso
+        
+        $CodCurso = $_GET['CodCurso'];                                                               
+        
+        $obj = new CursosBean();
+            
+        $obj->setCodCurso($CodCurso);                                          
+            
+        $objDao = new CursosDao();  
+        
+        $res=$objDao->EliminarCurso($obj);
+            
+        if ($res==1) {
+                $men="Curso eliminado correctamente";
+            }
+            else {
+                $men="Error al eliminar al curso";
+            }
+            $response["state"]=$men;
+            echo json_encode($response);
+            
+            $pagina = "../vista/Administrador/Cursos/adminCursos.php";
+            break;
+        }
+        
+        header('Location:' . $pagina);                                                      //me redirecciona
+        
+        ?>
