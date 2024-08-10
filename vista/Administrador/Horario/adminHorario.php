@@ -145,6 +145,57 @@
                 <hr>
             </div>
        </div>
+
+       <div class="section2">
+            <!-- <form name="tabla">
+                <input type="hidden" name="op">
+                <input type="hidden" name="N">
+                
+                <?php
+                    include_once '../../../util/Conexion_BD.php';
+                    $objc =  new ConexionBD();
+                    $cn = $objc->getConexionBD();
+                    $sql = "SELECT * FROM curso-docente";
+                    $rs = mysqli_query($cn,$sql);
+                ?>
+            
+                <div class="contenedor2">
+                    <table id="TablaHorarios">
+                        <thead>
+                            <th>N</th>
+                            <th>Cod de curso</th>
+                            <th>Nombre del curso</th>
+                            <th>Sección</th>
+                            <th>Aula</th>
+                            <th>Docente</th>
+                            <th>Hora</th>
+                            <th>Aula</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </thead>
+                    
+                        <?php 
+                            while($resultado = mysqli_fetch_array($rs)){
+                        ?>
+                        <tr>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><?php echo $resultado['']  ?> </td>
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['idDocente']  ?>`"></td>
+                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
+                        </tr>
+                    
+                        <?php }?>
+                    
+                    </table>
+                </div>
+            </form> -->
+        </div>
     </main>
 </body>
 </html>
