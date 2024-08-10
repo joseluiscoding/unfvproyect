@@ -19,11 +19,10 @@ function btnGuardarDocentes(){
     document.form.submit();                                         
 }
 
-function ActualizarDocente(idDocente){
+function btnActualizarDocente(){
     document.form.action = "../../../controlador/docenteControlador.php";
     document.form.method = "GET";                               
-    document.form.op.value = "2";
-    document.form.idDocente.value = idDocente;                               
+    document.form.op.value = "2";                       
     document.form.submit();     
 }
 

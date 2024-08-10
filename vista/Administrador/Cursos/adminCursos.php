@@ -96,39 +96,43 @@
         </div>
                 
         <div class="section2">
-            <?php
-                include_once '../../../util/Conexion_BD.php';
-                $objc =  new ConexionBD();
-                $cn = $objc->getConexionBD();
-                $sql = "SELECT * FROM cursos";
-                $rs = mysqli_query($cn,$sql);
-            ?>
-            
-            <div class="contenedor2">
-                <table id="TablaCursos">
-                    <thead>
-                        <th>Codigo de Curso</th>
-                        <th>Nombre de Curso</th>
-                        <th>Editar Curso</th>
-                        <th>Eliminar Curso</th>
-                    </thead>
+            <form name="tabla">
+                <input type="hidden" name="op">
+                <input type="hidden" name="codCurso">
                 
-                    <?php 
-                        while($resultado = mysqli_fetch_array($rs)){
-                    ?>
-                    <tr>
-                        <td><?php echo $resultado['codCurso']  ?> </td>
-                        <td><?php echo $resultado['nombreCurso']  ?> </td>
-                        <td><img src="../../../imagenes/BtnEditar.png" alt="btnEliminar" height="28px" onclick="location.href=''"></td>
-                        <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarCursos(<?php echo $resultado['codCurso']  ?>)"></td>
-                    </tr>
+                <?php
+                    include_once '../../../util/Conexion_BD.php';
+                    $objc =  new ConexionBD();
+                    $cn = $objc->getConexionBD();
+                    $sql = "SELECT * FROM cursos";
+                    $rs = mysqli_query($cn,$sql);
+                ?>
                 
-                    <?php }?>
-                
-                </table>
-            </div>
+                <div class="contenedor2">
+                    <table id="TablaCursos">
+                        <thead>
+                            <th>Codigo de Curso</th>
+                            <th>Nombre de Curso</th>
+                            <th>Editar Curso</th>
+                            <th>Eliminar Curso</th>
+                        </thead>
+                    
+                        <?php 
+                            while($resultado = mysqli_fetch_array($rs)){
+                        ?>
+                        <tr>
+                            <td><?php echo $resultado['codCurso']  ?> </td>
+                            <td><?php echo $resultado['nombreCurso']  ?> </td>
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=''"></td>
+                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarCursos(<?php echo $resultado['codCurso']  ?>)"></td>
+                        </tr>
+                    
+                        <?php }?>
+                    
+                    </table>
+                </div>
+            </form>
         </div>
-        
     </main>
 </body>
 </html>

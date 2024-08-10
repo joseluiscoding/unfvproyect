@@ -139,7 +139,7 @@
                             <td><?php echo $resultado['nombresDocente']  ?> </td>
                             <td><?php echo $resultado['apellidosDocente']  ?> </td>
                             <td><?php echo $resultado['correoDocente']  ?> </td>
-                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEliminar" height="28px" onclick="location.href=`actualizarDocentes.php`"></td>
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['idDocente']  ?>`"></td>
                             <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
                         </tr>
                     

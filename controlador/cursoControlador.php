@@ -48,7 +48,7 @@ switch ($op) {
         
     case 3:                                                                         //Eliminar Curso
         
-        $CodCurso = $_GET['CodCurso'];                                                               
+        $CodCurso = $_GET['codCurso'];                                                               
         
         $obj = new CursosBean();
             

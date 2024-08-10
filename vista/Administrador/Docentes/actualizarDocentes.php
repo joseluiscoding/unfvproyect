@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" href="adminDocentes.css">
-
+    
+    <?php  $idDocente = $_GET['idDocente']  ?>
     <script src="../../../util/mysql-connector.js"></script>
 </head>
 
@@ -66,9 +67,11 @@
         <div class="contenedor">
             <div class="section1"> 
                 <div class="title"> <img class=" logoDocentes" src="../../../imagenes/teacher.png" alt="logDocentes"> Actualizar datos del Docente </div>
-                <form name="actualizarDocentes">
+                
+                <form name="form">
                     <input type="hidden" name="op">
-                        
+
+                <input type="hidden" name="idDocente" value="<?php echo $idDocente ?>">    
                         <div class="form-group">
                             <span>Nombres</span>
                             <input class="controls" type="text" name="Nombre" placeholder="">
@@ -89,7 +92,7 @@
                             </button>
                         </div>
                         
-                    <input class="boton" type="button" value="Guardar" onclick="">
+                    <input class="boton" type="button" value="Actualizar" onclick="btnActualizarDocente()">
                 </form>
                 <hr>
             </div>
