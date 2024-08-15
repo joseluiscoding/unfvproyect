@@ -113,3 +113,30 @@ hr {
     display: flex;
     justify-content: center;
 }
+
+/*Para la tabla de Horarios:*/
+
+#TablaHorarios {
+    width: 1500px;
+    color: black;
+    font-size: 15px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 5px 10px ;
+    border: 1px solid black;
+    background: #8F3925;
+    color: #F4F5F3;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background: rgba(99, 98, 98, 0.4);
+}

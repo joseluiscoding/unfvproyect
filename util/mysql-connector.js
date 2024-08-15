@@ -55,3 +55,10 @@ function btnEliminarCursos(codCurso){
     document.tabla.codCurso.value = codCurso;                                    
     document.tabla.submit();     
 }
+
+function btnGuardarHorarios(){
+    document.form.action = "../../../controlador/horarioControlador.php";
+    document.form.method = "GET";                               
+    document.form.op.value = "1";                                
+    document.form.submit();     
+}

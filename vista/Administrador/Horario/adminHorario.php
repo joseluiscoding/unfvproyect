@@ -9,6 +9,20 @@
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
     <link rel="stylesheet" type="text/css" href="adminHorario.css" title="style"/>
 
+    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <script src="../../../util/mysql-connector.js"></script>
+
+    <script> 
+        $(document).ready(function(){
+            let table = new DataTable('#TablaHorarios');
+
+        }
+        );
+    </script>
+
     <?php
         include_once '../../../util/Conexion_BD.php';
         $objc =  new ConexionBD();
@@ -17,7 +31,7 @@
         $rs = mysqli_query($cn,$sql);
     ?>
 
-<?php
+    <?php
         include_once '../../../util/Conexion_BD.php';
         $objc =  new ConexionBD();
         $cn = $objc->getConexionBD();
@@ -77,7 +91,7 @@
             </button>
         </header>
 
-       <div class="contenedor">
+        <div class="contenedor">
             <div class="section1">
                 <div class="title"> <img class=" logoHorario" src="../../../imagenes/horarios.png" alt="logoHorarios"> Horarios </div>
                 
@@ -119,8 +133,34 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <span>Escuela</span>
+                        <select class="controls" name="TipoEscuela">
+                            <option disabled selected="">Seleccione una opción</option>
+                            <option value="Sistemas">Sistemas</option>
+                            <option value="Industrial">Industrial</option>
+                            <option value="Transporte">Transporte</option>
+                            <option value="Agroindustrial">Agroindustrial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <span>Ciclo</span>
+                        <select class="controls" name="Ciclo">
+                            <option disabled selected="">Seleccione una opción</option>
+                            <option value="Primer">I</option>
+                            <option value="Segundo">II</option>
+                            <option value="Tercer">III</option>
+                            <option value="Cuarto">IV</option>
+                            <option value="Quinto">V</option>
+                            <option value="Sexto">VI</option>
+                            <option value="Septimo">VII</option>
+                            <option value="Octavo">VII</option>
+                            <option value="Noveno">IX</option>
+                            <option value="Decimo">X</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <span>Aula</span>
-                        <input class="controls" type="text" id="Aula" name="" >
+                        <input class="controls" type="text" id="Aula">
                     </div>
                     <div class="form-group">
                         <span>Sección</span>
@@ -128,7 +168,15 @@
                     </div>
                     <div class="form-group">
                         <span>Día de la Semana</span>
-                        <input class="controls" type="text" id="Dia" >
+                        <select class="controls" name="diaSemana">
+                            <option disabled selected="">Seleccione una opción</option>
+                            <option value="Lunes">Lunes</option>
+                            <option value="Martes">Martes</option>
+                            <option value="Miercoles">Miércoles</option>
+                            <option value="Jueves">Jueves</option>
+                            <option value="Viernes">Viernes</option>
+                            <option value="Sabado">Sábado</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <span>Hora Inicio</span>
@@ -139,62 +187,40 @@
                         <input class="controls" type="text" id="HoraFin" >
                     </div>
 
-                    <input class="boton" type="button" value="Guardar" onclick="">
+                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarHorarios()">
                 </form>
 
                 <hr>
             </div>
-       </div>
+        </div>
 
-       <div class="section2">
-            <!-- <form name="tabla">
+        <div class="section2">
+            <form name="tabla">
                 <input type="hidden" name="op">
-                <input type="hidden" name="N">
+                <input type="hidden" name="n">
                 
-                <?php
-                    include_once '../../../util/Conexion_BD.php';
-                    $objc =  new ConexionBD();
-                    $cn = $objc->getConexionBD();
-                    $sql = "SELECT * FROM curso-docente";
-                    $rs = mysqli_query($cn,$sql);
-                ?>
+                
             
                 <div class="contenedor2">
                     <table id="TablaHorarios">
                         <thead>
                             <th>N</th>
-                            <th>Cod de curso</th>
-                            <th>Nombre del curso</th>
+                            <th>Código del Curso</th>
+                            <th>Curso</th>
+                            <th>Docente</th>
                             <th>Sección</th>
                             <th>Aula</th>
                             <th>Docente</th>
-                            <th>Hora</th>
-                            <th>Aula</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
+                            <th>Día</th>
+                            <th>Hora Inicio</th>
+                            <th>Hora Fin</th>
                         </thead>
-                    
-                        <?php 
-                            while($resultado = mysqli_fetch_array($rs)){
-                        ?>
-                        <tr>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><?php echo $resultado['']  ?> </td>
-                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['idDocente']  ?>`"></td>
-                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
-                        </tr>
-                    
-                        <?php }?>
-                    
+
+
+
                     </table>
                 </div>
-            </form> -->
+            </form>
         </div>
     </main>
 </body>
