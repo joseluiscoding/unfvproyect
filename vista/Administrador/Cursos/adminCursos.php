@@ -122,8 +122,8 @@
                         ?>
                         <tr>
                             <td><?php echo $resultado['codCurso']  ?> </td>
-                            <td><?php echo $resultado['nombreCurso']  ?> </td>
-                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarCursos.php?codCurso=<?php echo $resultado['codCurso']  ?>`"></td>
+                            <td><?php echo $resultado['nombreCurso']  ?> </td>                  <?php $link = "actualizarCursos.php?codCurso=" . $resultado['codCurso'] . "&nombreCurso=" . urlencode($resultado['nombreCurso']);?>
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href='<?php echo $link ?>'"></td>
                             <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarCursos(<?php echo $resultado['codCurso']  ?>)"></td>
                         </tr>
                     

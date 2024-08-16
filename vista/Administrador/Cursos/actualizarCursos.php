@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="adminCursos.css">
     
     <?php  $idDocente = $_GET['codCurso']  ?>
+    <?php  $codCurso = $_GET['codCurso']  ?>
+    <?php  $nombreCurso = $_GET['nombreCurso']  ?>
+
     <script src="../../../util/mysql-connector.js"></script>
 </head>
 
@@ -74,11 +77,11 @@
                     
                         <div class="form-group">
                             <span>Cod Curso</span>
-                            <input class="controls" type="text" name="CodCurso" placeholder="Ingrese el código del curso">
+                            <input class="controls" type="text" name="CodCurso" value="<?php echo $codCurso ?>">
                         </div>
                         <div class="form-group">
                             <span>Nombre del Curso</span>
-                            <input class="controls" type="text" name="NombreCurso" placeholder="Ingrese el nombre del curso">
+                            <input class="controls" type="text" name="NombreCurso" value="<?php echo $nombreCurso ?>">
                         </div>   
                         
                         <input class="boton" type="button" value="Guardar" onclick="btnActualizarCursos()">
