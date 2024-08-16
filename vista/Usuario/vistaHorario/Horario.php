@@ -33,25 +33,19 @@
                 </a>
             </li>
             <li class="sidebar__item">
-                <a class="sidebar__link" href="../DashboardAdmin/inicioAdministrar.php">
+                <a class="sidebar__link" href="../DashboardUsuario/inicioUsuario.php">
                     <i class="sidebar__icon fa-solid fa-house"></i>
                     <span class="sidebar__text">Inicio</span>
                 </a>
             </li>
             <li class="sidebar__item">
-                <a class="sidebar__link" href="../Docentes/adminDocentes.php">
+                <a class="sidebar__link" href="../vistaDocentes/Docentes.php">
                     <i class="sidebar__icon fa-solid fa-chalkboard-user"></i>
                     <span class="sidebar__text">Docentes</span>
                 </a>
             </li>
             <li class="sidebar__item">
-                <a class="sidebar__link" href="../Cursos/adminCursos.php">
-                    <i class="sidebar__icon fa-solid fa-book"></i>
-                    <span class="sidebar__text">Cursos</span>
-                </a>
-            </li>
-            <li class="sidebar__item">
-                <a class="sidebar__link" href="../Horario/adminHorario.php">
+                <a class="sidebar__link" href="../vistaHorario/Horario.php">
                     <i class="sidebar__icon fa-solid fa-calendar-days"></i>
                     <span class="sidebar__text">Horarios</span>
                 </a>
@@ -75,9 +69,13 @@
             </button>
         </header>
 
-        
-        <div class="section1">
-            <div class="title"> <img class=" logoHorario" src="../../../imagenes/horarios.png" alt="logoHorarios"> Horarios </div>
+        <div class="contenedor">
+            <div class="section1">
+                <div class="title"> <img class=" logoHorario" src="../../../imagenes/horarios.png" alt="logoHorarios"> Horarios </div>
+            </div>
+        </div>    
+            
+        <div class="section2">
             <form name="tabla">
             
                 <?php

@@ -7,6 +7,13 @@ body{
     overflow: auto;
 }
 
+.contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
 .main .section1 {
     width: 95%;
     padding: 20px;
@@ -23,6 +30,12 @@ body{
     font-weight: bold;
     display: flex;
     align-items: center;
+}
+
+.main .section2 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 /*Para la tabla de Horarios:*/

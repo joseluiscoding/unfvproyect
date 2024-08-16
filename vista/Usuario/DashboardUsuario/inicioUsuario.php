@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li class="sidebar__item">
-                <a class="sidebar__link" href="">
+                <a class="sidebar__link" href="../vistaHorario/Horario.php">
                     <i class="sidebar__icon fa-solid fa-calendar-days"></i>
                     <span class="sidebar__text">Horarios</span>
                 </a>
