@@ -100,7 +100,7 @@
                     <div class="form-group">
                         <span>Docente</span>
     
-                        <select class="controls">
+                        <select class="controls" name="idDocente">
                             <option value="" disabled selected>Seleccione un docente</option>
                             <?php
                                 while ($row = mysqli_fetch_array($rs))
@@ -118,7 +118,7 @@
 
                     <div class="form-group">
                         <span>Curso</span>
-                        <select class="controls">
+                        <select class="controls" name="Curso">
                             <option value="" disabled selected>Seleccione un curso</option>
                             <?php
                                 while ($row = mysqli_fetch_array($rs2))
@@ -146,25 +146,25 @@
                         <span>Ciclo</span>
                         <select class="controls" name="Ciclo">
                             <option disabled selected="">Seleccione una opción</option>
-                            <option value="Primer">I</option>
-                            <option value="Segundo">II</option>
-                            <option value="Tercer">III</option>
-                            <option value="Cuarto">IV</option>
-                            <option value="Quinto">V</option>
-                            <option value="Sexto">VI</option>
-                            <option value="Septimo">VII</option>
-                            <option value="Octavo">VII</option>
-                            <option value="Noveno">IX</option>
-                            <option value="Decimo">X</option>
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                            <option value="IV">IV</option>
+                            <option value="V">V</option>
+                            <option value="VI">VI</option>
+                            <option value="VII">VII</option>
+                            <option value="VII">VII</option>
+                            <option value="IX">IX</option>
+                            <option value="X">X</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" >
                         <span>Aula</span>
-                        <input class="controls" type="text" id="Aula">
+                        <input class="controls" type="text" id="Aula" name="Aula">
                     </div>
                     <div class="form-group">
                         <span>Sección</span>
-                        <input class="controls" type="text" id="Seccion">
+                        <input class="controls" type="text" id="Seccion" name="Seccion">
                     </div>
                     <div class="form-group">
                         <span>Día de la Semana</span>
@@ -180,11 +180,11 @@
                     </div>
                     <div class="form-group">
                         <span>Hora Inicio</span>
-                        <input class="controls" type="text" id="HoraInicio" >
+                        <input class="controls" type="text" id="HoraInicio" name="HoraInicio">
                     </div>
                     <div class="form-group">
                         <span>Hora Fin</span>
-                        <input class="controls" type="text" id="HoraFin" >
+                        <input class="controls" type="text" id="HoraFin" name="HoraFin">
                     </div>
 
                     <input class="boton" type="button" value="Guardar" onclick="btnGuardarHorarios()">
@@ -199,7 +199,15 @@
                 <input type="hidden" name="op">
                 <input type="hidden" name="n">
                 
-                
+                <?php
+                    include_once '../../../util/Conexion_BD.php';
+                    $objc =  new ConexionBD();
+                    $cn = $objc->getConexionBD();
+                    $sql3 = "SELECT a.N,a.codCurso,b.nombreCurso AS Curso , CONCAT(c.nombresDocente,' ',c.apellidosDocente) AS Docente, a.seccion , a.aula , a.Ciclo ,a.diaClases , a.horaInicio , a.horaFin FROM `HORARIO` a
+                        INNER JOIN cursos b ON a.codCurso = b.codCurso
+                        INNER JOIN docentes c ON a.idDocente = c.idDocente";
+                    $rs3 = mysqli_query($cn,$sql3);
+                ?>
             
                 <div class="contenedor2">
                     <table id="TablaHorarios">
@@ -210,13 +218,33 @@
                             <th>Docente</th>
                             <th>Sección</th>
                             <th>Aula</th>
-                            <th>Docente</th>
+                            <th>Ciclo</th>
                             <th>Día</th>
                             <th>Hora Inicio</th>
                             <th>Hora Fin</th>
                         </thead>
 
+                        <?php 
+                            while($resultado = mysqli_fetch_array($rs3)){
+                        ?>
 
+                        <tr>
+                            <td><?php echo $resultado['N']  ?> </td>
+                            <td><?php echo $resultado['codCurso']  ?> </td>
+                            <td><?php echo $resultado['Curso']  ?> </td>
+                            <td><?php echo $resultado['Docente']  ?> </td>
+                            <td><?php echo $resultado['seccion']  ?> </td>
+                            <td><?php echo $resultado['aula']  ?> </td>
+                            <td><?php echo $resultado['Ciclo']  ?> </td>
+                            <td><?php echo $resultado['diaClases']  ?> </td>
+                            <td><?php echo $resultado['horaInicio']  ?> </td>
+                            <td><?php echo $resultado['horaFin']  ?> </td>
+                            
+                            <!-- <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['idDocente']  ?>`"></td>
+                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td> -->
+                        </tr>
+
+                        <?php }?>
 
                     </table>
                 </div>

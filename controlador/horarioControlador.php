@@ -7,22 +7,31 @@ switch ($op) {
 
 case 1:                                                                         //Registrar Docentes                
       
-    $Nombre = $_GET[''];                                          
-    $Apellido = $_GET['Apellido'];  
-    $Correo = $_GET['Correo'];
-    $Nombre = $_GET['Nombre'];                                          
-    $Apellido = $_GET['Apellido'];  
-    $Correo = $_GET['Correo'];    
+    $codCurso = $_GET['Curso'];                                          
+    $idDocente = $_GET['idDocente'];  
+    $escuela = $_GET['TipoEscuela'];
+    $Ciclo = $_GET['Ciclo'];
+    $aula = $_GET['Aula'];                                          
+    $seccion = $_GET['Seccion'];  
+    $diaClases = $_GET['diaSemana'];    
+    $horaInicio = $_GET['HoraInicio'];  
+    $horaFin = $_GET['HoraFin'];  
 
-    $obj = new DocentesBean();                                                     
-    $obj->setNombre($Nombre);                                          
-    $obj->setApellido($Apellido);   
-    $obj->setCorreo($Correo);  
+    $obj = new HorarioBean();                                                     
+    $obj->setcodCurso($codCurso);                                          
+    $obj->setIdDocente($idDocente);   
+    $obj->setescuela($escuela);
+    $obj->setCiclo($Ciclo);                                          
+    $obj->setaula($aula);   
+    $obj->setseccion($seccion);  
+    $obj->setdiaClases($diaClases);                                          
+    $obj->sethoraInicio($horaInicio); 
+    $obj->sethoraFin($horaFin);  
 
-    $objDao = new DocentesDao();                                              
-    $objDao->guardarDocentes($obj);
+    $objDao = new HorarioDao();                                              
+    $objDao->guardarHorario($obj);
     
-    $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
+    $pagina = "../vista/Administrador/Horario/adminHorario.php";
     break;
     
 // case 2:                                                                         //Actualizar Docentes
