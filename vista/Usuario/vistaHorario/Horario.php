@@ -92,7 +92,7 @@
                     <table id="TablaHorarios">
                         <thead>
                             <th id="columN">N</th>
-                            <th>Código del Curso</th>
+                            <th id="columCod">Código del Curso</th>
                             <th>Curso</th>
                             <th>Docente</th>
                             <th id="columSeccion">Sección</th>
