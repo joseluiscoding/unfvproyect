@@ -34,35 +34,47 @@ case 1:                                                                         
     $pagina = "../vista/Administrador/Horario/adminHorario.php";
     break;
     
-// case 2:                                                                         //Actualizar Docentes
+case 2:                                                                         //Actualizar Docentes
 
-//     $id=$_GET["idDocente"];
-//     $nombreDocentes=$_GET["Nombre"];
-//     $apellidoDocentes=$_GET["Apellido"];
-//     $correoDocentes=$_GET["Correo"];
+    $N=$_GET["N"];
+    $codCurso = $_GET['Curso'];                                          
+    $idDocente = $_GET['idDocente'];  
+    $escuela = $_GET['TipoEscuela'];
+    $Ciclo = $_GET['Ciclo'];
+    $aula = $_GET['Aula'];                                          
+    $seccion = $_GET['Seccion'];  
+    $diaClases = $_GET['diaSemana'];    
+    $horaInicio = $_GET['HoraInicio'];  
+    $horaFin = $_GET['HoraFin'];  
     
-//     $objDocentesBean=new DocentesBean();
+    $objHorarioBean=new HorarioBean();
     
-//     $objDocentesBean->setIdDocente($id);
-//     $objDocentesBean->setNombre($nombreDocentes);
-//     $objDocentesBean->setApellido($apellidoDocentes);
-//     $objDocentesBean->setCorreo($correoDocentes);
+    $objHorarioBean->setN($N);
+    $objHorarioBean->setcodCurso($codCurso);                                          
+    $objHorarioBean->setIdDocente($idDocente);   
+    $objHorarioBean->setescuela($escuela);
+    $objHorarioBean->setCiclo($Ciclo);                                          
+    $objHorarioBean->setaula($aula);   
+    $objHorarioBean->setseccion($seccion);  
+    $objHorarioBean->setdiaClases($diaClases);                                          
+    $objHorarioBean->sethoraInicio($horaInicio); 
+    $objHorarioBean->sethoraFin($horaFin);  
     
-//     $objDocentesDao = new DocentesDao();  
-//     $res=$objDocentesDao->ActualizarDocente($objDocentesBean);
+    $objHorarioDao = new HorarioDao();  
+    $res=$objHorarioDao->ActualizarHorario($objHorarioBean);
 
-//     if ($res==1) {
-//         $men="Datos del docente actualizados";
-//     }
-//     else {
-//         $men="Error al actualizar datos del docente";
-//     }
+    if ($res==1) {
+        $men="Datos del horario actualizados";
+    }
+    else {
+        $men="Error al actualizar datos del horario";
+    }
 
-//     $response["state"]=$men;
-//     echo json_encode($response);
+    $response["state"]=$men;
+    echo json_encode($response);
 
-//     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
-//     break;
+    $pagina = "../vista/Administrador/Horario/adminHorario.php";
+    break;
 
 case 3:                                                                         //Eliminar Docentes
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>adminHorarios</title>
+    <title>ActualizarHorarios</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
@@ -187,71 +187,13 @@
                         <input class="controls" type="text" id="HoraFin" name="HoraFin">
                     </div>
 
-                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarHorarios()">
+                    <input class="boton" type="button" value="Actualizar" onclick="btnActualizarHorarios()">
                 </form>
 
                 <hr>
             </div>
         </div>
 
-        <div class="section2">
-            <form name="tabla">
-                <input type="hidden" name="op">
-                <input type="hidden" name="N">
-                
-                <?php
-                    include_once '../../../util/Conexion_BD.php';
-                    $objc =  new ConexionBD();
-                    $cn = $objc->getConexionBD();
-                    $sql3 = "SELECT a.N,a.codCurso,b.nombreCurso AS Curso , CONCAT(c.nombresDocente,' ',c.apellidosDocente) AS Docente, a.seccion , a.aula , a.Ciclo ,a.diaClases , a.horaInicio , a.horaFin FROM `HORARIO` a
-                        INNER JOIN cursos b ON a.codCurso = b.codCurso
-                        INNER JOIN docentes c ON a.idDocente = c.idDocente";
-                    $rs3 = mysqli_query($cn,$sql3);
-                ?>
-            
-                <div class="contenedor2">
-                    <table id="TablaHorarios">
-                        <thead>
-                            <th id="columN">N</th>
-                            <th id="columCod">Código del Curso</th>
-                            <th>Curso</th>
-                            <th>Docente</th>
-                            <th id="columSeccion">Sección</th>
-                            <th id="columAula">Aula</th>
-                            <th id="columCiclo">Ciclo</th>
-                            <th id="columDia">Día</th>
-                            <th id="columHoraI">Hora Inicio</th>
-                            <th id="columHoraF">Hora Fin</th>
-                            <th id="columEdit">Editar</th>
-                            <th id="columDelete">Eliminar</th>
-                        </thead>
-
-                        <?php 
-                            while($resultado = mysqli_fetch_array($rs3)){
-                        ?>
-
-                        <tr>
-                            <td><?php echo $resultado['N']  ?> </td>
-                            <td><?php echo $resultado['codCurso']  ?> </td>
-                            <td><?php echo $resultado['Curso']  ?> </td>
-                            <td><?php echo $resultado['Docente']  ?> </td>
-                            <td><?php echo $resultado['seccion']  ?> </td>
-                            <td><?php echo $resultado['aula']  ?> </td>
-                            <td><?php echo $resultado['Ciclo']  ?> </td>
-                            <td><?php echo $resultado['diaClases']  ?> </td>
-                            <td><?php echo $resultado['horaInicio']  ?> </td>
-                            <td><?php echo $resultado['horaFin']  ?> </td>
-                            
-                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href='actualizarHorario.php?N=<?php echo $resultado['N']?>'"></td>
-                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarHorario(<?php echo $resultado['N']  ?>)"></td>
-                        </tr>
-
-                        <?php }?>
-
-                    </table>
-                </div>
-            </form>
-        </div>
     </main>
 </body>
 </html>

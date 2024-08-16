@@ -19,19 +19,20 @@ class HorarioDao{
         return $rs;
     }
 
-    // public function ActualizarDocente(DocentesBean $objDocentes){
-    //     try {
-    //         $sql="UPDATE docentes SET nombresDocente='$objDocentes->Nombre', apellidosDocente='$objDocentes->Apellido',correoDocente='$objDocentes->Correo' WHERE idDocente='$objDocentes->IdDocente'";
-            
-    //         $objc=new ConexionBD();
-    //         $cn=$objc->getConexionBD();
-    //         $rs=mysqli_query($cn,$sql);
-    //         mysqli_close($cn);
-    //     } catch (Exception $e) {
+    public function ActualizarHorario(HorarioBean $objHorario){
+        try {
+            $sql="UPDATE horario SET codCurso='$objHorario->codCurso', idDocente='$objHorario->idDocente', escuela='$objHorario->escuela', Ciclo='$objHorario->Ciclo', aula='$objHorario->aula', seccion='$objHorario->seccion', diaClases='$objHorario->diaClases', horaInicio='$objHorario->horaInicio', horaFin='$objHorario->horaFin' WHERE N='$objHorario->N'";
+            echo $sql;
+            stop();
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            mysqli_close($cn);
+        } catch (Exception $e) {
     
-    //     }
-    //     return $rs;
-    // }
+        }
+        return $rs;
+    }
 
     public function EliminarHorario(HorarioBean $objHorario){
         try {

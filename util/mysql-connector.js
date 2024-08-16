@@ -63,6 +63,13 @@ function btnGuardarHorarios(){
     document.form.submit();     
 }
 
+function btnActualizarHorarios(){
+    document.form.action = "../../../controlador/horarioControlador.php";
+    document.form.method = "GET";                               
+    document.form.op.value = "2";                          
+    document.form.submit();     
+}
+
 function btnEliminarHorario(N){
     document.tabla.action = "../../../controlador/horarioControlador.php";
     document.tabla.method = "GET";                               
