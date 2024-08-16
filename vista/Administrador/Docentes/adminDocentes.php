@@ -95,7 +95,7 @@
                         </div>
                         <div class="form-group">
                             <span>Foto</span>
-                            <input class="controls" type="file" name="image" style="display: none">
+                            <input class="controls" type="file" name="image" style="display: none" id="image">
                             <button>
                                 <label for="image"> IMG </label>
                             </button>
