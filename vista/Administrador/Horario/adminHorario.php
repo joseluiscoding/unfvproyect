@@ -197,7 +197,7 @@
         <div class="section2">
             <form name="tabla">
                 <input type="hidden" name="op">
-                <input type="hidden" name="n">
+                <input type="hidden" name="N">
                 
                 <?php
                     include_once '../../../util/Conexion_BD.php';
@@ -212,16 +212,18 @@
                 <div class="contenedor2">
                     <table id="TablaHorarios">
                         <thead>
-                            <th>N</th>
+                            <th id="columN">N</th>
                             <th>Código del Curso</th>
                             <th>Curso</th>
                             <th>Docente</th>
-                            <th>Sección</th>
-                            <th>Aula</th>
-                            <th>Ciclo</th>
-                            <th>Día</th>
-                            <th>Hora Inicio</th>
-                            <th>Hora Fin</th>
+                            <th id="columSeccion">Sección</th>
+                            <th id="columAula">Aula</th>
+                            <th id="columCiclo">Ciclo</th>
+                            <th id="columDia">Día</th>
+                            <th id="columHoraI">Hora Inicio</th>
+                            <th id="columHoraF">Hora Fin</th>
+                            <!-- <th>Editar</th>
+                            <th>Eliminar</th> -->
                         </thead>
 
                         <?php 
@@ -240,8 +242,8 @@
                             <td><?php echo $resultado['horaInicio']  ?> </td>
                             <td><?php echo $resultado['horaFin']  ?> </td>
                             
-                            <!-- <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['idDocente']  ?>`"></td>
-                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td> -->
+                            <!-- <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['N']  ?>`"></td>
+                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['N']  ?>)"></td> -->
                         </tr>
 
                         <?php }?>

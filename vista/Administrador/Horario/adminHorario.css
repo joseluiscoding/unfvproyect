@@ -140,3 +140,30 @@ td {
 tbody tr:hover {
     background: rgba(99, 98, 98, 0.4);
 }
+
+#columN {
+    width: 10px;
+}
+
+#columSeccion {
+    width: 50px;
+}
+
+#columAula {
+    width: 50px;
+}
+
+#columCiclo {
+    width: 50px;
+}
+
+#columDia {
+    width: 100px;
+}
+
+#columHoraI {
+    width: 100px;
+}
+#columHoraF {
+    width: 100px;
+}

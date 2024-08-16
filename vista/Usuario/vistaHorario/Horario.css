@@ -1,49 +1,45 @@
-.menu {
-    width: 76.55%;
-    float: right;
-       
+body{
+    height: 100vh;
 }
 
-#buscador{
-    width:100%;
-    height: 35%;
-}
-
-.busqueda {
-    margin-top: 45px;
-    margin-left: 50px;
-    width: 400px;
-    height: 30px;
-    font-size: 15px;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid black;
-}
-
-.container{
-    width: 90%;
-    margin-top: 30px;
-    margin-left: 35px;
-    border: solid 1px black;
-    font-family: calibri;
-}
-
-table {
+.main {
     width: 100%;
+    overflow: auto;
+}
+
+.main .section1 {
+    width: 95%;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+.logoHorario {
+    height: 45px;
+    margin-right: 15px;
+}
+
+.main .section1 .title {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/*Para la tabla de Horarios:*/
+
+#TablaHorarios {
+    width: 1500px;
     color: black;
     font-size: 15px;
     table-layout: fixed;
     border-collapse: collapse;
 }
 
-thead {
-    background: #8F3925;
-    color: #F4F5F3;
-}
-
 th {
     padding: 5px 10px ;
     border: 1px solid black;
+    background: #8F3925;
+    color: #F4F5F3;
 }
 
 td {
@@ -56,4 +52,29 @@ tbody tr:hover {
     background: rgba(99, 98, 98, 0.4);
 }
 
-/*PAGINA DE HORARIOS*/
+#columN {
+    width: 10px;
+}
+
+#columSeccion {
+    width: 50px;
+}
+
+#columAula {
+    width: 50px;
+}
+
+#columCiclo {
+    width: 50px;
+}
+
+#columDia {
+    width: 100px;
+}
+
+#columHoraI {
+    width: 100px;
+}
+#columHoraF {
+    width: 100px;
+}
