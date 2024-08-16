@@ -145,6 +145,10 @@ tbody tr:hover {
     width: 10px;
 }
 
+#columCod {
+    width: 120px;
+}
+
 #columSeccion {
     width: 50px;
 }
@@ -166,4 +170,11 @@ tbody tr:hover {
 }
 #columHoraF {
     width: 100px;
+}
+
+#columEdit {
+    width: 50px;
+}
+#columDelete {
+    width: 50px;
 }

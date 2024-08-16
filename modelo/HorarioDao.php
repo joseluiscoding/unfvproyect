@@ -33,17 +33,17 @@ class HorarioDao{
     //     return $rs;
     // }
 
-    // public function EliminarDocente(DocentesBean $objDocentes){
-    //     try {
-    //         $sql="DELETE FROM docentes WHERE idDocente='$objDocentes->IdDocente';";
-    //         $objc=new ConexionBD();
-    //         $cn=$objc->getConexionBD();
-    //         $rs=mysqli_query($cn,$sql);
-    //         mysqli_close($cn);
-    //     } catch (Exception $e) {
+    public function EliminarHorario(HorarioBean $objHorario){
+        try {
+            $sql="DELETE FROM horario WHERE N='$objHorario->N';";
+            $objc=new ConexionBD();
+            $cn=$objc->getConexionBD();
+            $rs=mysqli_query($cn,$sql);
+            mysqli_close($cn);
+        } catch (Exception $e) {
     
-    //     }
-    //     return $rs;
-    // }
+        }
+        return $rs;
+    }
 
 }

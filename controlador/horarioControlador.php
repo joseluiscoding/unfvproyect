@@ -64,24 +64,24 @@ case 1:                                                                         
 //     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
 //     break;
 
-// case 3:                                                                         //Eliminar Docentes
+case 3:                                                                         //Eliminar Docentes
 
-//     $id=$_GET["idDocente"];
-//     $objDocentesBean=new DocentesBean();
-//     $objDocentesBean->setIdDocente($id);
-//     $objDocentesDao = new DocentesDao();   
-//     $res=$objDocentesDao->EliminarDocente($objDocentesBean);
-//     if ($res==1) {
-//         $men="Docente eliminado correctamente";
-//     }
-//     else {
-//         $men="Error al eliminar al docente";
-//     }
-//     $response["state"]=$men;
-//     echo json_encode($response);
+    $N=$_GET["N"];
+    $objHorarioBean=new HorarioBean();
+    $objHorarioBean->setN($N);
+    $objHorarioDao = new HorarioDao();   
+    $res=$objDocentesDao->EliminarHorario($objHorarioBean);
+    if ($res==1) {
+        $men="Fila del horario eliminada correctamente";
+    }
+    else {
+        $men="Error al eliminar la fila del horario ";
+    }
+    $response["state"]=$men;
+    echo json_encode($response);
     
-//     $pagina = "../vista/Administrador/Docentes/adminDocentes.php";
-//     break;
+    $pagina = "../vista/Administrador/Horario/adminHorario.php";
+    break;
 }
 
 header('Location:' . $pagina);                                                      //me redirecciona

@@ -213,7 +213,7 @@
                     <table id="TablaHorarios">
                         <thead>
                             <th id="columN">N</th>
-                            <th>Código del Curso</th>
+                            <th id="columCod">Código del Curso</th>
                             <th>Curso</th>
                             <th>Docente</th>
                             <th id="columSeccion">Sección</th>
@@ -222,8 +222,8 @@
                             <th id="columDia">Día</th>
                             <th id="columHoraI">Hora Inicio</th>
                             <th id="columHoraF">Hora Fin</th>
-                            <!-- <th>Editar</th>
-                            <th>Eliminar</th> -->
+                            <th id="columEdit">Editar</th>
+                            <th id="columDelete">Eliminar</th>
                         </thead>
 
                         <?php 
@@ -242,8 +242,8 @@
                             <td><?php echo $resultado['horaInicio']  ?> </td>
                             <td><?php echo $resultado['horaFin']  ?> </td>
                             
-                            <!-- <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['N']  ?>`"></td>
-                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['N']  ?>)"></td> -->
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarHorario.php?N=<?php echo $resultado['N']  ?>`"></td>
+                            <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarHorario(<?php echo $resultado['N']  ?>)"></td>
                         </tr>
 
                         <?php }?>
