@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="adminDocentes.css">
     
     <?php  $idDocente = $_GET['idDocente']  ?>
+    <?php  $nombresDocente = $_GET['nombresDocente']  ?>
+    <?php  $apellidosDocente = $_GET['apellidosDocente']  ?>
+    <?php  $correoDocente = $_GET['correoDocente']  ?>
+
     <script src="../../../util/mysql-connector.js"></script>
 </head>
 
@@ -74,15 +78,15 @@
                     
                         <div class="form-group">
                             <span>Nombres</span>
-                            <input class="controls" type="text" name="Nombre" placeholder="">
+                            <input class="controls" type="text" name="Nombre" value="<?php echo $nombresDocente ?>">
                         </div>
                         <div class="form-group">
                             <span>Apellidos</span>
-                            <input class="controls" type="text" name="Apellido" placeholder="">
+                            <input class="controls" type="text" name="Apellido" value="<?php echo $apellidosDocente ?>">
                         </div>
                         <div class="form-group">
                             <span>Correo</span>
-                            <input class="controls" type="correo" name="Correo" placeholder="">
+                            <input class="controls" type="correo" name="Correo" value="<?php echo $correoDocente ?>">
                         </div>
                         <div class="form-group">
                             <span>Foto</span>

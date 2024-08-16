@@ -70,7 +70,7 @@ case 3:                                                                         
     $objHorarioBean=new HorarioBean();
     $objHorarioBean->setN($N);
     $objHorarioDao = new HorarioDao();   
-    $res=$objDocentesDao->EliminarHorario($objHorarioBean);
+    $res=$objHorarioDao->EliminarHorario($objHorarioBean);
     if ($res==1) {
         $men="Fila del horario eliminada correctamente";
     }

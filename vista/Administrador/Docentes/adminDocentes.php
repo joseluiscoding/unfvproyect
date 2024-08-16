@@ -123,7 +123,7 @@
                 <div class="contenedor2">
                     <table id="TablaDocentes">
                         <thead>
-                            <th>Id</th>
+                            <th>Id</th> 
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Correo</th>
@@ -138,12 +138,12 @@
                             <td><?php echo $resultado['idDocente']  ?> </td>
                             <td><?php echo $resultado['nombresDocente']  ?> </td>
                             <td><?php echo $resultado['apellidosDocente']  ?> </td>
-                            <td><?php echo $resultado['correoDocente']  ?> </td>
-                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href=`actualizarDocentes.php?idDocente=<?php echo $resultado['idDocente']  ?>`"></td>
+                            <td><?php echo $resultado['correoDocente']  ?> </td>                      <?php $link = "actualizarDocentes.php?idDocente=" . $resultado['idDocente'] . "&nombresDocente=" . urlencode($resultado['nombresDocente']) . "&apellidosDocente=" . urlencode($resultado['apellidosDocente']) . "&correoDocente=" . urlencode($resultado['correoDocente']);?>
+                            <td><img src="../../../imagenes/BtnEditar.png" alt="btnEditar" height="28px" onclick="location.href='<?php echo $link ?>'"></td>
                             <td><img src="../../../imagenes/BtnEliminar.png" alt="btnEliminar" height="30px" onclick="btnEliminarDocente(<?php echo $resultado['idDocente']  ?>)"></td>
                         </tr>
                     
-                        <?php }?>
+                        <?php }?>    
                     
                     </table>
                 </div>
