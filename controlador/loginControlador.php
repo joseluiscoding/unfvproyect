@@ -26,7 +26,7 @@ case 1:                                                                         
                 $pagina = "../vista/Usuario/DashboardUsuario/inicioUsuario.php";
                 break;
             case 'Docente':
-                $pagina = "#";
+                $pagina = "../vista/Usuario/DashboardUsuario/inicioUsuario.php";
                 break;
         }
     } else {
