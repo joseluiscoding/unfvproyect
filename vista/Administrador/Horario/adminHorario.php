@@ -199,11 +199,11 @@
                     </div>
                     <div class="form-group">
                         <span>Hora Inicio</span>
-                        <input class="controls" type="text" id="HoraInicio" name="HoraInicio">
+                        <input class="controls" type="time" id="HoraInicio" name="HoraInicio">
                     </div>
                     <div class="form-group">
                         <span>Hora Fin</span>
-                        <input class="controls" type="text" id="HoraFin" name="HoraFin">
+                        <input class="controls" type="time" id="HoraFin" name="HoraFin">
                     </div>
 
                     <input class="boton" type="button" value="Guardar" onclick="btnGuardarHorarios()">
