@@ -28,7 +28,7 @@ function btnActualizarDocente(){
 
 function btnEliminarDocente(idDocente){
     Swal.fire({
-        title: '¿Estás seguro que desea eliminar esta fila?',
+        title: '¿Estás seguro que desea eliminar este docente?',
         text: "¡No podrás revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
@@ -63,11 +63,31 @@ function btnActualizarCursos(){
 }
 
 function btnEliminarCursos(codCurso){
-    document.tabla.action = "../../../controlador/cursoControlador.php";
-    document.tabla.method = "GET";                               
-    document.tabla.op.value = "3"; 
-    document.tabla.codCurso.value = codCurso;                                    
-    document.tabla.submit();     
+    Swal.fire({
+        title: '¿Estás seguro que desea eliminar este curso?',
+        text: "¡No podrás revertir esta acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.tabla.action = "../../../controlador/cursoControlador.php";
+            document.tabla.method = "GET";                               
+            document.tabla.op.value = "3"; 
+            document.tabla.codCurso.value = codCurso;                                    
+            document.tabla.submit();   
+        }
+    });
+    
+    
+    // document.tabla.action = "../../../controlador/cursoControlador.php";
+    // document.tabla.method = "GET";                               
+    // document.tabla.op.value = "3"; 
+    // document.tabla.codCurso.value = codCurso;                                    
+    // document.tabla.submit();     
 }
 
 function btnGuardarHorarios(){
@@ -85,9 +105,28 @@ function btnActualizarHorarios(){
 }
 
 function btnEliminarHorario(N){
-    document.tabla.action = "../../../controlador/horarioControlador.php";
-    document.tabla.method = "GET";                               
-    document.tabla.op.value = "3"; 
-    document.tabla.N.value = N;                                    
-    document.tabla.submit();     
+    // document.tabla.action = "../../../controlador/horarioControlador.php";
+    // document.tabla.method = "GET";                               
+    // document.tabla.op.value = "3"; 
+    // document.tabla.N.value = N;                                    
+    // document.tabla.submit();
+    
+    Swal.fire({
+        title: '¿Estás seguro que desea eliminar esta fila?',
+        text: "¡No podrás revertir esta acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.tabla.action = "../../../controlador/horarioControlador.php";
+            document.tabla.method = "GET";                               
+            document.tabla.op.value = "3"; 
+            document.tabla.N.value = N;                                    
+            document.tabla.submit();
+        }
+    });
 }

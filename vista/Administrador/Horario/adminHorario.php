@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />  <!-- Iconos -->
     <link rel="stylesheet" type="text/css" href="../../../style.css" title="style"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"><!-- Para el css de SweetAlert2 -->
     <link rel="stylesheet" type="text/css" href="adminHorario.css" title="style"/>
 
     <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -37,6 +38,9 @@
             });
         });
     </script>
+
+    <!-- Para el uso de SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?php
         include_once '../../../util/Conexion_BD.php';
