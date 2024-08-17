@@ -36,6 +36,8 @@ body {
 }
 
 .main__button{
+    position: fixed;
+    right: 20px;
     width: 120px;
     height: 40px;
     border-radius: 10px;
