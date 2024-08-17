@@ -1,0 +1,124 @@
+/* ------------------------------------------------- */
+.post {
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.post__article {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 40px;
+
+    height: 650px;
+    width: 70%;
+
+    /* Glassmorphism CSS Generator */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.post__header {
+    padding-bottom: 20px;
+}
+
+.post__header-section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 12px;
+}
+
+.post__header-icon {
+    font-size: 40px;
+    color: #A3A3A3;
+}
+
+.post__header-info {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.post__description {
+    font-size: 12px;
+}
+
+.post__image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.post__image--img {
+    display: flex;
+    justify-content: center;
+}
+
+.post__image--img img {
+    width: 60%;
+}
+
+.post__actions {
+    width: 100vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.post__action-button {
+    background: none;
+}
+
+.post__action-button:hover {
+    cursor: pointer;
+}
+
+.post__action-icon,
+.post__action-text {
+    color: #737373;
+    font-size: 15px;
+}
+
+/* ------------------------------------------------- */
+.title {
+    margin-top: 130px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 50px;
+    margin-right: 50px;
+
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+
+
+    /* backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+.header__tittle {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    height: 60px;
+    padding-top: 7px;
+    font-size: 30px;
+
+
+
+}
