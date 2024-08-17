@@ -118,3 +118,14 @@ body {
     position: absolute;
     bottom: 0px;
 }
+
+/*Para la tabla de Horarios:*/
+.dataTables_filter {
+    margin-bottom: 30px;  
+}
+
+/* Añadir margen superior e inferior a la paginación */
+.dataTables_paginate {
+    margin-top: 10px;  
+    margin-bottom: 10px;  
+}
