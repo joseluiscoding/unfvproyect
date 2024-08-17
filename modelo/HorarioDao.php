@@ -22,8 +22,7 @@ class HorarioDao{
     public function ActualizarHorario(HorarioBean $objHorario){
         try {
             $sql="UPDATE horario SET codCurso='$objHorario->codCurso', idDocente='$objHorario->idDocente', escuela='$objHorario->escuela', Ciclo='$objHorario->Ciclo', aula='$objHorario->aula', seccion='$objHorario->seccion', diaClases='$objHorario->diaClases', horaInicio='$objHorario->horaInicio', horaFin='$objHorario->horaFin' WHERE N='$objHorario->N'";
-            echo $sql;
-            stop();
+
             $objc=new ConexionBD();
             $cn=$objc->getConexionBD();
             $rs=mysqli_query($cn,$sql);

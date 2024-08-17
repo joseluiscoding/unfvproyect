@@ -39,6 +39,9 @@
         $rs2 = mysqli_query($cn,$sql2);
     ?>
 
+
+    <?php  $N = $_GET['N']  ?> 
+
 </head>
 <body>
     <aside class="sidebar">
@@ -97,6 +100,8 @@
                 
                 <form name="form">
                     <input type="hidden" name="op">
+                    <input type="hidden" name="N" value="<?php echo $N ?>">    
+
                     <div class="form-group">
                         <span>Docente</span>
     

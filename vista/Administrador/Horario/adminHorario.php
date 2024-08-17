@@ -203,7 +203,7 @@
                     include_once '../../../util/Conexion_BD.php';
                     $objc =  new ConexionBD();
                     $cn = $objc->getConexionBD();
-                    $sql3 = "SELECT a.N,a.codCurso,b.nombreCurso AS Curso , CONCAT(c.nombresDocente,' ',c.apellidosDocente) AS Docente, a.seccion , a.aula , a.Ciclo ,a.diaClases , a.horaInicio , a.horaFin FROM `HORARIO` a
+                    $sql3 = "SELECT a.N,a.codCurso,b.nombreCurso AS Curso , CONCAT(c.nombresDocente,' ',c.apellidosDocente) AS Docente, a.escuela , a.seccion , a.aula , a.Ciclo ,a.diaClases , a.horaInicio , a.horaFin FROM `HORARIO` a
                         INNER JOIN cursos b ON a.codCurso = b.codCurso
                         INNER JOIN docentes c ON a.idDocente = c.idDocente";
                     $rs3 = mysqli_query($cn,$sql3);
@@ -216,6 +216,7 @@
                             <th id="columCod">Código del Curso</th>
                             <th>Curso</th>
                             <th>Docente</th>
+                            <th>Escuela</th>
                             <th id="columSeccion">Sección</th>
                             <th id="columAula">Aula</th>
                             <th id="columCiclo">Ciclo</th>
@@ -235,6 +236,7 @@
                             <td><?php echo $resultado['codCurso']  ?> </td>
                             <td><?php echo $resultado['Curso']  ?> </td>
                             <td><?php echo $resultado['Docente']  ?> </td>
+                            <td><?php echo $resultado['escuela']  ?> </td>
                             <td><?php echo $resultado['seccion']  ?> </td>
                             <td><?php echo $resultado['aula']  ?> </td>
                             <td><?php echo $resultado['Ciclo']  ?> </td>
