@@ -6,6 +6,7 @@ function ingresar(){
 }
 
 function registrarUsuario(){
+    if( Nombres == "" || Apellidos == "" || Correo == "" || Password == ""){ return }
     document.form.action = "../../controlador/usuarioControlador.php";
     document.form.method = "GET";
     document.form.op.value = "1";

@@ -42,7 +42,7 @@
                 <h3> Contraseña </h3>
                 <input class="controls" type= "password" name="Password" id="contraseña" placeholder="Ingrese sus Apellidos" required>
 
-                <button class="boton" type="submit" onclick="registrarUsuario()">Registrar
+                <button class="boton" type="submit" onclick="registrarUsuario()">Registrar</button>
             </form>
         </section>
     </div>
