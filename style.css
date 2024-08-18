@@ -33,6 +33,7 @@ body {
     background-color: #964022;
     position: fixed;
     padding-right: 120px;
+    z-index: calc(1); /*para que se sobreponga*/
 }
 
 .main__button{
@@ -78,7 +79,7 @@ body {
     width: 200px;
     margin: 20px 24px;
     position: relative;
-    z-index: calc(1); /*para que el logo se quede en el header*/
+    z-index: calc(3); /*para que el logo se quede en el header*/
 }
 
 .sidebar__link {

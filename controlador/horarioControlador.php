@@ -80,6 +80,7 @@ case 3:                                                                         
 
     $N=$_GET["N"];
     $objHorarioBean=new HorarioBean();
+    
     $objHorarioBean->setN($N);
     $objHorarioDao = new HorarioDao();   
     $res=$objHorarioDao->EliminarHorario($objHorarioBean);
@@ -93,6 +94,16 @@ case 3:                                                                         
     echo json_encode($response);
     
     $pagina = "../vista/Administrador/Horario/adminHorario.php";
+    break;
+
+case 4: // Obtener Horarios por Escuela
+    $escuela = $_GET['escuela'];
+
+    $objHorarioDao = new HorarioDao();
+    $horarios = $objHorarioDao->obtenerHorariosPorEscuela($escuela);
+
+    $response["horarios"] = $horarios;
+    echo json_encode($response);
     break;
 }
 

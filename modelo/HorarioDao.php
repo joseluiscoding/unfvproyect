@@ -46,4 +46,31 @@ class HorarioDao{
         return $rs;
     }
 
+    // Función para obtener horarios por escuela con JOIN
+    public function obtenerHorariosPorEscuela($escuela) {
+        try {
+            $sql = "SELECT h.*, d.nombresDocente, d.apellidosDocente, c.nombreCurso
+                    FROM horario h
+                    JOIN docentes d ON h.idDocente = d.idDocente
+                    JOIN cursos c ON h.codCurso = c.codCurso
+                    WHERE h.escuela = '$escuela'";
+            
+            $objCnx = new ConexionBD();
+            $cn = $objCnx->getConexionBD();
+            $result = mysqli_query($cn, $sql);
+            $horarios = [];
+
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $horarios[] = $row;
+                }
+            }
+
+            mysqli_close($cn);
+        } catch (Exception $e) {
+            return null;
+        }
+        return $horarios;
+    }
+
 }
