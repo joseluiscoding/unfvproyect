@@ -1,6 +1,9 @@
 <?php
 require_once '../modelo/UsuarioDao.php';
 require_once '../modelo/UsuarioBean.php';
+
+session_start(); // para iniciar sesion
+
 $op = $_GET['op'];
 
 switch ($op) {
@@ -20,6 +23,7 @@ case 1:                                                                         
     if ($tipoUsuario) {
         switch ($tipoUsuario) {
             case 'Administrador':
+                $_SESSION['usuario'] = $correo_formulario;
                 $pagina = "../vista/Administrador/DashboardAdmin/inicioAdministrar.php";
                 break;
             case 'Alumno':

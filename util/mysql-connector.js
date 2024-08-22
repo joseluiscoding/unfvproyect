@@ -1,4 +1,9 @@
 function ingresar(){
+    
+    if( !document.form.correo.value || !document.form.contraseña.value ){ 
+        return;
+    }
+    
     document.form.action = "controlador/loginControlador.php";          //me redirecciona a la direccion ...
     document.form.method = "GET";                                       //metodo de envio
     document.form.op.value = "1";                                       //op va a ser 1
@@ -6,14 +11,16 @@ function ingresar(){
 }
 
 function registrarUsuario(){
-    if( Nombres == "" || Apellidos == "" || Correo == "" || Password == ""){ 
+    
+    if( !document.form.TipoUsuario.value || !document.form.Nombres.value || !document.form.Apellidos.value || !document.form.Email.value || !document.form.Password.value ){ 
         return;
     }
-
+    
     document.form.action = "../../controlador/usuarioControlador.php";
-    document.form.method = "GET";
     document.form.op.value = "1";
+    document.form.method = "GET";
     document.form.submit();
+
 }
 
 function btnGuardarDocentes(){
@@ -86,12 +93,6 @@ function btnEliminarCursos(codCurso){
         }
     });
     
-    
-    // document.tabla.action = "../../../controlador/cursoControlador.php";
-    // document.tabla.method = "GET";                               
-    // document.tabla.op.value = "3"; 
-    // document.tabla.codCurso.value = codCurso;                                    
-    // document.tabla.submit();     
 }
 
 function btnGuardarHorarios(){
@@ -109,11 +110,6 @@ function btnActualizarHorarios(){
 }
 
 function btnEliminarHorario(N){
-    // document.tabla.action = "../../../controlador/horarioControlador.php";
-    // document.tabla.method = "GET";                               
-    // document.tabla.op.value = "3"; 
-    // document.tabla.N.value = N;                                    
-    // document.tabla.submit();
     
     Swal.fire({
         title: '¿Estás seguro que desea eliminar esta fila?',

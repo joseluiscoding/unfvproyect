@@ -9,11 +9,11 @@ $objUserDao = new UsuarioDao();
 
 switch ($op) {
     case 1: { //Registrar Usuario
-        $tipoUsuario = $_POST["TipoUsuario"];
-        $nombres = $_POST["Nombres"];
-        $apellidos = $_POST["Apellidos"];
-        $email = $_POST["Email"];
-        $password = $_POST["Password"];
+        $tipoUsuario = $_GET["TipoUsuario"];
+        $nombres = $_GET["Nombres"];
+        $apellidos = $_GET["Apellidos"];
+        $email = $_GET["Email"];
+        $password = $_GET["Password"];
 
         $objUserBean = new UsuarioBean();
         $objUserBean->settipoUsuario($tipoUsuario);

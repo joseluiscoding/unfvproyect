@@ -29,11 +29,11 @@
                 <input type="hidden" name="op">
                 <h2>INICIAR SESIÓN</h2>
                 <h3> Correo </h3>
-                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo" required>
                 <h3> Contraseña </h3>
-                <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+                <input class="controls" type= "password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña" required>
                 <p class="textoAcuerdos"> Estoy de acuerdo con <a href="#">Términos y Condiciones</a> </p>
-                <input class="boton" type="button" value="Ingresar" onclick="ingresar()">
+                <button class="boton" onclick="ingresar()"> Ingresar </button>
                 <p class="crearCuenta"><a href="vista/Login/register.php">¿No tienes una cuenta?</a></p>
             </form>
         </section>
