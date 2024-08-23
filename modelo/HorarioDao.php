@@ -73,4 +73,37 @@ class HorarioDao{
         return $horarios;
     }
 
+    // public function __construct() {
+    //     $connObj = new ConexionBD();          // Crear una instancia de la clase ConexionBD
+    //     $this->conexion = $connObj->getConexionBD();  // Obtener la conexión
+    // }
+
+    // // Método para verificar si hay un horario solapado
+    // public function verificarHorarioSolapado($horario) {
+    //     $query = "SELECT COUNT(*) FROM horario 
+    //               WHERE diaClases = ? 
+    //               AND aula = ?
+    //               AND (
+    //                   (horaInicio < ? AND horaFin > ?) OR
+    //                   (horaInicio < ? AND horaFin > ?) OR
+    //                   (horaInicio >= ? AND horaFin <= ?)
+    //               )";
+    //     $stmt = $this->conexion->prepare($query);
+    //     $stmt->bind_param("ssssssss", 
+    //                       $horario->getdiaClases(), 
+    //                       $horario->getaula(), 
+    //                       $horario->gethoraInicio(), 
+    //                       $horario->gethoraInicio(), 
+    //                       $horario->gethoraFin(), 
+    //                       $horario->gethoraFin(),
+    //                       $horario->gethoraInicio(),
+    //                       $horario->gethoraFin());
+    //     $stmt->execute();
+    //     $stmt->bind_result($count);
+    //     $stmt->fetch();
+    //     $stmt->close();
+        
+    //     return $count > 0; // Retorna true si hay un horario solapado
+    // }
+
 }

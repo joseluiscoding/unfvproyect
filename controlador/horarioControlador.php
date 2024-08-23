@@ -28,7 +28,14 @@ case 1:                                                                         
     $obj->sethoraInicio($horaInicio); 
     $obj->sethoraFin($horaFin);  
 
-    $objDao = new HorarioDao();                                              
+    $objDao = new HorarioDao();
+    
+    // if ($objDao->verificarHorarioSolapado($obj)) {
+    //     $response["state"] = "Error: El horario se solapa con otro horario existente.";
+    //     echo json_encode($response);
+    //     exit(); // Detener la ejecución si se encuentra un solapamiento
+    // }
+
     $objDao->guardarHorario($obj);
     
     $pagina = "../vista/Administrador/Horario/adminHorario.php";
