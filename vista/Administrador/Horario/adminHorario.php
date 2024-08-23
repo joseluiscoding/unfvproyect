@@ -128,7 +128,7 @@
                     <div class="form-group">
                         <span>Docente</span>
     
-                        <select class="controls" name="idDocente">
+                        <select class="controls" name="idDocente" required>
                             <option value="" disabled selected>Seleccione un docente</option>
                             <?php
                                 while ($row = mysqli_fetch_array($rs))
@@ -146,7 +146,7 @@
 
                     <div class="form-group">
                         <span>Curso</span>
-                        <select class="controls" name="Curso">
+                        <select class="controls" name="Curso" required>
                             <option value="" disabled selected>Seleccione un curso</option>
                             <?php
                                 while ($row = mysqli_fetch_array($rs2))
@@ -162,8 +162,8 @@
                     </div>
                     <div class="form-group">
                         <span>Escuela</span>
-                        <select class="controls" name="TipoEscuela">
-                            <option disabled selected="">Seleccione una opción</option>
+                        <select class="controls" name="TipoEscuela" required>
+                            <option value ="" disabled selected="">Seleccione una opción</option>
                             <option value="Sistemas">Sistemas</option>
                             <option value="Industrial">Industrial</option>
                             <option value="Transporte">Transporte</option>
@@ -172,8 +172,8 @@
                     </div>
                     <div class="form-group">
                         <span>Ciclo</span>
-                        <select class="controls" name="Ciclo">
-                            <option disabled selected="">Seleccione una opción</option>
+                        <select class="controls" name="Ciclo" required>
+                            <option value="" disabled selected="">Seleccione una opción</option>
                             <option value="I">I</option>
                             <option value="II">II</option>
                             <option value="III">III</option>
@@ -188,16 +188,16 @@
                     </div>
                     <div class="form-group" >
                         <span>Aula</span>
-                        <input class="controls" type="text" id="Aula" name="Aula">
+                        <input class="controls" type="text" id="Aula" name="Aula" required>
                     </div>
                     <div class="form-group">
                         <span>Sección</span>
-                        <input class="controls" type="text" id="Seccion" name="Seccion">
+                        <input class="controls" type="text" id="Seccion" name="Seccion" required>
                     </div>
                     <div class="form-group">
                         <span>Día de la Semana</span>
-                        <select class="controls" name="diaSemana">
-                            <option disabled selected="">Seleccione una opción</option>
+                        <select class="controls" name="diaSemana" required>
+                            <option value ="" disabled selected="">Seleccione una opción</option>
                             <option value="Lunes">Lunes</option>
                             <option value="Martes">Martes</option>
                             <option value="Miercoles">Miércoles</option>
@@ -208,14 +208,14 @@
                     </div>
                     <div class="form-group">
                         <span>Hora Inicio</span>
-                        <input class="controls" type="time" id="HoraInicio" name="HoraInicio">
+                        <input class="controls" type="time" id="HoraInicio" name="HoraInicio" required>
                     </div>
                     <div class="form-group">
                         <span>Hora Fin</span>
-                        <input class="controls" type="time" id="HoraFin" name="HoraFin">
+                        <input class="controls" type="time" id="HoraFin" name="HoraFin" required>
                     </div>
 
-                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarHorarios()">
+                    <button class="boton" onclick="btnGuardarHorarios()">Guardar</button>
                 </form>
 
                 <hr>

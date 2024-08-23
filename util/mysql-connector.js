@@ -24,6 +24,9 @@ function registrarUsuario(){
 }
 
 function btnGuardarDocentes(){
+    if( !document.form.Nombre.value || !document.form.Apellido.value || !document.form.Correo.value ){ 
+        return;
+    }
     document.form.action = "../../../controlador/docenteControlador.php";
     document.form.method = "GET";                               
     document.form.op.value = "1";                                
@@ -60,6 +63,9 @@ function btnEliminarDocente(idDocente){
 }
 
 function btnGuardarCursos(){
+    if( !document.form.CodCurso.value || !document.form.NombreCurso.value ){ 
+        return;
+    }
     document.form.action = "../../../controlador/cursoControlador.php";
     document.form.method = "GET";                               
     document.form.op.value = "1";                                
@@ -96,6 +102,9 @@ function btnEliminarCursos(codCurso){
 }
 
 function btnGuardarHorarios(){
+    if( !document.form.idDocente.value || !document.form.Curso.value || !document.form.TipoEscuela.value || !document.form.Ciclo.value || !document.form.Aula.value || !document.form.Seccion.value || !document.form.diaSemana.value || !document.form.HoraInicio.value || !document.form.HoraFin.value ){ 
+        return;
+    }
     document.form.action = "../../../controlador/horarioControlador.php";
     document.form.method = "GET";                               
     document.form.op.value = "1";                                

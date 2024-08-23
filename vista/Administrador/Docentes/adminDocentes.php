@@ -111,25 +111,25 @@
                         
                         <div class="form-group">
                             <span>Nombres</span>
-                            <input class="controls" type="text" name="Nombre" placeholder="Ingrese Nombre">
+                            <input class="controls" type="text" name="Nombre" placeholder="Ingrese Nombre" required>
                         </div>
                         <div class="form-group">
                             <span>Apellidos</span>
-                            <input class="controls" type="text" name="Apellido" placeholder="Ingrese Apellido">
+                            <input class="controls" type="text" name="Apellido" placeholder="Ingrese Apellido" required>
                         </div>
                         <div class="form-group">
                             <span>Correo</span>
-                            <input class="controls" type="correo" name="Correo" placeholder="Ingrese Correo">
+                            <input class="controls" type="correo" name="Correo" placeholder="Ingrese Correo" required>
                         </div>
                         <div class="form-group">
                             <span>Foto</span>
-                            <input class="controls" type="file" name="image" style="display: none" id="image">
+                            <input class="controls" type="file" name="image" style="display: none" id="image" required>
                             <button>
                                 <label for="image"> IMG </label>
                             </button>
                         </div>
                         
-                    <input class="boton" type="button" value="Guardar" onclick="btnGuardarDocentes()">
+                    <button class="boton" onclick="btnGuardarDocentes()">Guardar</button>
                 </form>
                 <hr>
             </div>
