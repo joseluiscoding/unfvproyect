@@ -6,6 +6,7 @@ class UsuarioBean {
     public $tipoUsuario;
     public $nombresUsuario;
     public $apellidosUsuario;
+    public $codAlumno; 
     
     public function setId($id)                      //recibo el parametro (el id del formulario)
     {
@@ -37,6 +38,10 @@ class UsuarioBean {
         $this->apellidosUsuario = $apellidosUsuario;            
     }
 
+    public function setCodAlumno($codAlumno)      // Cambiado a codAlumno
+    {
+        $this->codAlumno = $codAlumno;            
+    }
 
     public function getId()                     //devuelve el valor del atributo $id
     {
@@ -66,6 +71,11 @@ class UsuarioBean {
     public function getapellidosUsuario()
     {
         return $this->apellidosUsuario;
+    }
+
+    public function getCodAlumno()               // Cambiado a codAlumno
+    {
+        return $this->codAlumno;
     }
 
 }

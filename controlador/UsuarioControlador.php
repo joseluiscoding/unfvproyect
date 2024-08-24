@@ -14,6 +14,7 @@ switch ($op) {
         $apellidos = $_GET["Apellidos"];
         $email = $_GET["Email"];
         $password = $_GET["Password"];
+        $codAlumno = $_GET["CodigoAlumno"];
 
         $objUserBean = new UsuarioBean();
         $objUserBean->settipoUsuario($tipoUsuario);
@@ -21,6 +22,7 @@ switch ($op) {
         $objUserBean->setapellidosUsuario($apellidos);
         $objUserBean->setCorreo($email);
         $objUserBean->setContraseña($password);
+        $objUserBean->setCodAlumno($codAlumno);
 
         $res = $objUserDao->AddUsers($objUserBean);
         if ($res == 1) {
@@ -59,6 +61,13 @@ switch ($op) {
         $objUserBean = new UsuarioBean();
         $objUserBean->setId($user);
         $list = $objUserDao->FilterUserId($objUserBean);
+        echo json_encode($list);
+        break;
+    }
+
+    case 5: { // Filtrar por correo
+        $correo = $_GET["correo"];
+        $list = $objUserDao->FilterUserByEmail($correo);
         echo json_encode($list);
         break;
     }

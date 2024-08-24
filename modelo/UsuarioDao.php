@@ -20,7 +20,8 @@ class UsuarioDao{
 
     public function AddUsers(UsuarioBean $objUsers){
         try {
-            $sql="INSERT INTO usuario(tipoUsuario,nombresUsuario,apellidosUsuario,correo,contraseña) VALUES('$objUsers->tipoUsuario','$objUsers->nombresUsuario','$objUsers->apellidosUsuario','$objUsers->correo','$objUsers->contraseña');";
+            $sql="INSERT INTO usuario(tipoUsuario,nombresUsuario,apellidosUsuario,correo,contraseña) 
+            VALUES('$objUsers->tipoUsuario','$objUsers->nombresUsuario','$objUsers->apellidosUsuario','$objUsers->correo','$objUsers->contraseña','$objUsers->codAlumno');";
             $objc=new ConexionBD();
             $cn=$objc->getConexionBD();
             $rs=mysqli_query($cn,$sql);
@@ -40,8 +41,12 @@ class UsuarioDao{
             $list=array();
     
             while($row=mysqli_fetch_assoc($rs)){
-                array_push($list,array('id'=>$row['id'],'tipoUsuario'=>$row['tipoUsuario'],'correo'=>$row['correo'],
-                'contraseña'=>$row['contraseña'],'edad'=>$row['edad']));
+                array_push($list,array('id'=>$row['id'],
+                'tipoUsuario'=>$row['tipoUsuario'],
+                'correo'=>$row['correo'],
+                'contraseña'=>$row['contraseña'],
+                'edad'=>$row['edad'],
+                'codAlumno' => $row['codAlumno']));
             }
             mysqli_close($cn);
         } catch (Exception $e) {
@@ -72,12 +77,44 @@ class UsuarioDao{
             $list=array();
     
             while($row=mysqli_fetch_assoc($rs)){
-                array_push($list,array('id'=>$row['id'],'tipoUsuario'=>$row['tipoUsuario'],'correo'=>$row['correo'],
-                'contraseña'=>$row['contraseña'],'edad'=>$row['edad']));
+                array_push($list,array(
+                    'id'=>$row['id'],
+                    'tipoUsuario'=>$row['tipoUsuario'],
+                    'correo'=>$row['correo'],
+                    'contraseña'=>$row['contraseña'],
+                    'edad'=>$row['edad'],
+                    'codAlumno' => $row['codAlumno']));
             }
             mysqli_close($cn);
         } catch (Exception $e) {
     
+        }
+        return $list;
+    }
+
+    public function FilterUserByEmail($correo){
+        try {
+            $sql = "SELECT * FROM usuario WHERE correo='$correo';";
+            $objc = new ConexionBD();
+            $cn = $objc->getConexionBD();
+            $rs = mysqli_query($cn, $sql);
+            $list = array();
+
+            while ($row = mysqli_fetch_assoc($rs)) {
+                array_push($list, array(
+                    'id' => $row['id'],
+                    'tipoUsuario' => $row['tipoUsuario'],
+                    'nombresUsuario' => $row['nombresUsuario'],
+                    'apellidosUsuario' => $row['apellidosUsuario'],
+                    'correo' => $row['correo'],
+                    'contraseña' => $row['contraseña'],
+                    'edad' => $row['edad'],
+                    'codAlumno' => $row['codAlumno'] 
+                ));
+            }
+            mysqli_close($cn);
+        } catch (Exception $e) {
+           
         }
         return $list;
     }
